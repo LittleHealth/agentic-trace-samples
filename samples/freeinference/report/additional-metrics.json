@@ -1,0 +1,138 @@
+{
+  "transitions": [
+    {
+      "transition": "append",
+      "requests": 9076,
+      "input_tokens": 834585726,
+      "previous_shared_share": 0.9898350456585767
+    },
+    {
+      "transition": "initial",
+      "requests": 106,
+      "input_tokens": 2494496,
+      "previous_shared_share": 0.0
+    },
+    {
+      "transition": "mutation",
+      "requests": 1333,
+      "input_tokens": 114915488,
+      "previous_shared_share": 0.2678967928290015
+    },
+    {
+      "transition": "switch",
+      "requests": 33,
+      "input_tokens": 2102446,
+      "previous_shared_share": 0.35221140599907147
+    }
+  ],
+  "tool_calls": 11045,
+  "calls_with_result_tokens": 11025,
+  "observed_new_tool_result_tokens": 6316617,
+  "calls_outcome_counts": {
+    "ok": 9957,
+    "error": 702,
+    "timeout": 366,
+    "missing": 20
+  },
+  "tool_trigger_requests_with_zero_tool_role": 453,
+  "dropped_turns_requests": 848,
+  "dropped_turns_with_input_decrease": 583,
+  "comparisons": [
+    {
+      "ttl": "5m",
+      "policy": "ttl_only",
+      "hit_rate": 0.8793138242640821,
+      "hit_rate_loss_percentage_points": 0.0,
+      "retention_reduction": 0.0,
+      "dead_retention_reduction": 0.0
+    },
+    {
+      "ttl": "5m",
+      "policy": "reclaim_mutate",
+      "hit_rate": 0.8791564101965071,
+      "hit_rate_loss_percentage_points": 0.0157414067574968,
+      "retention_reduction": 0.43064140924538596,
+      "dead_retention_reduction": 0.8117847764368843
+    },
+    {
+      "ttl": "5m",
+      "policy": "reclaim_dead",
+      "hit_rate": 0.8786133601743382,
+      "hit_rate_loss_percentage_points": 0.07004640897438907,
+      "retention_reduction": 0.04699474855326291,
+      "dead_retention_reduction": 0.07745532008057798
+    },
+    {
+      "ttl": "5m",
+      "policy": "reclaim_both",
+      "hit_rate": 0.8784559796490746,
+      "hit_rate_loss_percentage_points": 0.08578446150074859,
+      "retention_reduction": 0.4677960196115092,
+      "dead_retention_reduction": 0.8706173116035614
+    },
+    {
+      "ttl": "15m",
+      "policy": "ttl_only",
+      "hit_rate": 0.8919983189264354,
+      "hit_rate_loss_percentage_points": 0.0,
+      "retention_reduction": 0.0,
+      "dead_retention_reduction": 0.0
+    },
+    {
+      "ttl": "15m",
+      "policy": "reclaim_mutate",
+      "hit_rate": 0.8916502503606512,
+      "hit_rate_loss_percentage_points": 0.034806856578428746,
+      "retention_reduction": 0.623409018251551,
+      "dead_retention_reduction": 0.8637722159781784
+    },
+    {
+      "ttl": "15m",
+      "policy": "reclaim_dead",
+      "hit_rate": 0.8911369188264155,
+      "hit_rate_loss_percentage_points": 0.08614001000198934,
+      "retention_reduction": 0.08777247631930041,
+      "dead_retention_reduction": 0.11272272866825117
+    },
+    {
+      "ttl": "15m",
+      "policy": "reclaim_both",
+      "hit_rate": 0.8907889173452542,
+      "hit_rate_loss_percentage_points": 0.12094015811812131,
+      "retention_reduction": 0.672585772614522,
+      "dead_retention_reduction": 0.9227689075002
+    },
+    {
+      "ttl": "none",
+      "policy": "ttl_only",
+      "hit_rate": 0.9014800092100479,
+      "hit_rate_loss_percentage_points": 0.0,
+      "retention_reduction": 0.0,
+      "dead_retention_reduction": 0.0
+    },
+    {
+      "ttl": "none",
+      "policy": "reclaim_mutate",
+      "hit_rate": 0.900503575752954,
+      "hit_rate_loss_percentage_points": 0.09764334570938615,
+      "retention_reduction": 0.9330935587161395,
+      "dead_retention_reduction": 0.9363561139090899
+    },
+    {
+      "ttl": "none",
+      "policy": "reclaim_dead",
+      "hit_rate": 0.8998135600932228,
+      "hit_rate_loss_percentage_points": 0.16664491168251194,
+      "retention_reduction": 0.6395191959990814,
+      "dead_retention_reduction": 0.6411388212060737
+    },
+    {
+      "ttl": "none",
+      "policy": "reclaim_both",
+      "hit_rate": 0.8988930248981392,
+      "hit_rate_loss_percentage_points": 0.25869843119087355,
+      "retention_reduction": 0.9950731771117942,
+      "dead_retention_reduction": 0.9978925906580127
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "dataset": "harvardMadsys/freeinference_agentic_trace",
+  "revision": "16d3c04dae6ccaa0c48a9064e204e3a8f1eb9ade",
+  "week": "2026-05-17_2026-05-23",
+  "files": [
+    {
+      "path": "release/2026-05-17_2026-05-23/manifest.json",
+      "bytes": 1394
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/processed/requests.parquet",
+      "bytes": 21989656
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/processed/sessions.parquet",
+      "bytes": 5014
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/processed/tables.json",
+      "bytes": 589
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/processed/tool_calls.parquet",
+      "bytes": 167525
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-17.jsonl.zst",
+      "bytes": 484429
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-18.jsonl.zst",
+      "bytes": 334746
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-19.jsonl.zst",
+      "bytes": 2493421
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-20.jsonl.zst",
+      "bytes": 103976
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-21.jsonl.zst",
+      "bytes": 160758
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-22.jsonl.zst",
+      "bytes": 273898
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-23.jsonl.zst",
+      "bytes": 168235
+    }
+  ]
+}

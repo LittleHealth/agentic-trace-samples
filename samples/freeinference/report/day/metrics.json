@@ -1,0 +1,55 @@
+{
+  "population": "Agentic top-level sessions; eval:swe-bench and nested sessions excluded from metrics",
+  "top_level_sessions_in_files": 25,
+  "nested_sessions_in_files": 0,
+  "sessions": 25,
+  "requests": 1375,
+  "tool_calls": 1419,
+  "input_o200k": 90960364,
+  "encoded_tokens": 90950128,
+  "omitted_partial_block_tokens": 10236,
+  "role_tokens": {
+    "tool_definitions": 9718304,
+    "system": 7570897,
+    "user": 19756112,
+    "assistant": 17005918,
+    "tool": 36909133
+  },
+  "tool_input_share": 0.4057716061910218,
+  "previous_shared_share": 0.8804097120127198,
+  "session_seen_share": 0.8804948575773307,
+  "warm_5m_shared_share": 0.8554356734934997,
+  "warm_15m_shared_share": 0.8665693356693241,
+  "median_peak_over_first": 1.7151150736056398,
+  "sessions_peak_at_least_twice_first": 10,
+  "median_session_tool_share": 0.27471908902716985,
+  "median_session_previous_shared_share": 0.9111772493163393,
+  "request_input_median": 70076,
+  "request_input_peak": 121205,
+  "transitions": {
+    "initial": 25,
+    "append": 1163,
+    "mutation": 182,
+    "switch": 5
+  },
+  "causes": {
+    "injection": 48,
+    "tool_definitions": 3,
+    "dropped_turns": 98,
+    "other": 27,
+    "system_prompt": 6
+  },
+  "input_decrease_steps": 72,
+  "model_provider_switch_steps": 5,
+  "provider_cache_count_coverage": 1118,
+  "provider_reported_cache_share_on_available": 0.8615210217474141,
+  "sources": [
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-17.jsonl.zst",
+      "lines": 25,
+      "uncompressed_sha256": "177942bb9835792d3b4f22b61ed632811a8e413ce75f0d0e4e4469dd45e6b3e2",
+      "source_url": "https://huggingface.co/datasets/harvardMadsys/freeinference_agentic_trace/resolve/16d3c04dae6ccaa0c48a9064e204e3a8f1eb9ade/release/2026-05-17_2026-05-23/traces/2026-05-17.jsonl.zst"
+    }
+  ],
+  "publication_note": "仅将本地绝对路径替换为来源相对路径和固定版本 URL；计数及未压缩内容哈希未改动。"
+}

@@ -1,0 +1,63 @@
+{
+  "all_passed": true,
+  "upstream_commit": "925a718eed7cc01255e7dcea024e70389cf021e5",
+  "upstream_unmodified": true,
+  "official_reader_table_and_trace_hash_checks": true,
+  "original_day_unchanged": true,
+  "official_simulation_return_code": 0,
+  "agentic_requests": 10548,
+  "custom_encoded_tokens": 954018928,
+  "official_hit_plus_miss_tokens": 954018928,
+  "all_52_tallies_match_custom_token_total": true,
+  "per_request_keys_match": true,
+  "infinite_ttl_misses_match_per_request_sum": true,
+  "sources_manifest_matches": true,
+  "samples": [
+    {
+      "folder": "01-append",
+      "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+      "requests": 44,
+      "raw_record_sha256": "b8da6b8f7da47516622c42b60f34bf75cb18eb9606d1615c95bdada896e88040"
+    },
+    {
+      "folder": "02-injection",
+      "session_id": "d3cf2b494fbb04a8d1850c2367f5fcdd",
+      "requests": 27,
+      "raw_record_sha256": "88e11e41edb579a4760bf824762d6e6e770712c23c2c2df556c1a4f89a51dc64"
+    },
+    {
+      "folder": "03-dropped-turns",
+      "session_id": "26b3e835fc1dc0d41af636b34005c880",
+      "requests": 46,
+      "raw_record_sha256": "d29faac9d44f28875a08769628d66aa5a8ca6efc82734f6cabaa186b8b08f65b"
+    }
+  ],
+  "output_files": [
+    {
+      "file": "cheaper_reads.parquet",
+      "bytes": 8215,
+      "sha256": "714b5c014d9546da1261cdbafede4143c174175bc2835abbba34c493be1c424f"
+    },
+    {
+      "file": "request_misses.parquet",
+      "bytes": 41554,
+      "sha256": "28547156ff21a05743b6480a6eeb30a7968866fec618bbfde47392c3533b8340"
+    },
+    {
+      "file": "sources.json",
+      "bytes": 479,
+      "sha256": "49a0a3b1580fc1734dd5d5fb404593a16c7fbba4c7bc664c593beef1c29497b2"
+    },
+    {
+      "file": "tallies.parquet",
+      "bytes": 6312,
+      "sha256": "a5166d5cdf02ff620478aa5de423edd7b0d7b046ecbeb1d6c6fa37f0c063e7f5"
+    },
+    {
+      "file": "totals.parquet",
+      "bytes": 3602,
+      "sha256": "edd494cdfbeffc23e427a23d1acb0f2c918115e841a286936322b7d86690e56b"
+    }
+  ],
+  "all_local_markdown_links_resolve": true
+}

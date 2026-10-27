@@ -1,0 +1,2 @@
+# 2026-10-28 官方运行日志；仅将本地输出绝对路径规范化为相对路径。
+2026-05-17_2026-05-23: the cache replay and the cheaper-reads model, into ../simulation/2026-05-17_2026-05-23

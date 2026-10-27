@@ -1,0 +1,93 @@
+{
+  "population": "Agentic top-level sessions; eval:swe-bench and nested sessions excluded from metrics",
+  "top_level_sessions_in_files": 106,
+  "nested_sessions_in_files": 19,
+  "sessions": 106,
+  "requests": 10548,
+  "tool_calls": 11045,
+  "input_o200k": 954098156,
+  "encoded_tokens": 954018928,
+  "omitted_partial_block_tokens": 79228,
+  "role_tokens": {
+    "tool_definitions": 81546717,
+    "system": 37419859,
+    "user": 39631920,
+    "assistant": 254919681,
+    "tool": 540579979
+  },
+  "tool_input_share": 0.566587384747026,
+  "previous_shared_share": 0.8988897880650855,
+  "session_seen_share": 0.8998103232601691,
+  "warm_5m_shared_share": 0.878113479106989,
+  "warm_15m_shared_share": 0.8906563245881428,
+  "median_peak_over_first": 2.7631696775934893,
+  "sessions_peak_at_least_twice_first": 63,
+  "median_session_tool_share": 0.3892947164829005,
+  "median_session_previous_shared_share": 0.9221525333484799,
+  "request_input_median": 91754.0,
+  "request_input_peak": 224615,
+  "transitions": {
+    "initial": 106,
+    "append": 9076,
+    "mutation": 1333,
+    "switch": 33
+  },
+  "causes": {
+    "injection": 192,
+    "tool_definitions": 58,
+    "dropped_turns": 848,
+    "other": 187,
+    "system_prompt": 31,
+    "tool_result": 12,
+    "compaction": 5
+  },
+  "input_decrease_steps": 666,
+  "model_provider_switch_steps": 33,
+  "provider_cache_count_coverage": 9309,
+  "provider_reported_cache_share_on_available": 0.8930236340364279,
+  "sources": [
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-17.jsonl",
+      "lines": 25,
+      "uncompressed_sha256": "177942bb9835792d3b4f22b61ed632811a8e413ce75f0d0e4e4469dd45e6b3e2",
+      "source_url": "https://huggingface.co/datasets/harvardMadsys/freeinference_agentic_trace/resolve/16d3c04dae6ccaa0c48a9064e204e3a8f1eb9ade/release/2026-05-17_2026-05-23/traces/2026-05-17.jsonl.zst"
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-18.jsonl",
+      "lines": 14,
+      "uncompressed_sha256": "c73376025d72834b7d2ebbb37ceb3098fa9044c94940b5a73b75539913907e06",
+      "source_url": "https://huggingface.co/datasets/harvardMadsys/freeinference_agentic_trace/resolve/16d3c04dae6ccaa0c48a9064e204e3a8f1eb9ade/release/2026-05-17_2026-05-23/traces/2026-05-18.jsonl.zst"
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-19.jsonl",
+      "lines": 8,
+      "uncompressed_sha256": "ac10c64682ef21b8aec74f013d633143a41489772de10d79c9b354071e30c46e",
+      "source_url": "https://huggingface.co/datasets/harvardMadsys/freeinference_agentic_trace/resolve/16d3c04dae6ccaa0c48a9064e204e3a8f1eb9ade/release/2026-05-17_2026-05-23/traces/2026-05-19.jsonl.zst"
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-20.jsonl",
+      "lines": 17,
+      "uncompressed_sha256": "adfe09d432bd8951ae8118af7f002da5c3ebc5c510c098cc35c10d2f1f71940b",
+      "source_url": "https://huggingface.co/datasets/harvardMadsys/freeinference_agentic_trace/resolve/16d3c04dae6ccaa0c48a9064e204e3a8f1eb9ade/release/2026-05-17_2026-05-23/traces/2026-05-20.jsonl.zst"
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-21.jsonl",
+      "lines": 15,
+      "uncompressed_sha256": "cccb96886adce8ebc62477608740a8fd8690a74cb051405f0540660d01196baf",
+      "source_url": "https://huggingface.co/datasets/harvardMadsys/freeinference_agentic_trace/resolve/16d3c04dae6ccaa0c48a9064e204e3a8f1eb9ade/release/2026-05-17_2026-05-23/traces/2026-05-21.jsonl.zst"
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-22.jsonl",
+      "lines": 16,
+      "uncompressed_sha256": "61aa55b9059a7f646a67a013b2d5d1228879a163eccf165f4c8dafcc790896e1",
+      "source_url": "https://huggingface.co/datasets/harvardMadsys/freeinference_agentic_trace/resolve/16d3c04dae6ccaa0c48a9064e204e3a8f1eb9ade/release/2026-05-17_2026-05-23/traces/2026-05-22.jsonl.zst"
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-23.jsonl",
+      "lines": 11,
+      "uncompressed_sha256": "ff97595f957639e74693d79538ca0abe2c477ca106fd42376b8c872f74dcce94",
+      "source_url": "https://huggingface.co/datasets/harvardMadsys/freeinference_agentic_trace/resolve/16d3c04dae6ccaa0c48a9064e204e3a8f1eb9ade/release/2026-05-17_2026-05-23/traces/2026-05-23.jsonl.zst"
+    }
+  ],
+  "publication_note": "仅将本地绝对路径替换为来源相对路径和固定版本 URL；计数及未压缩内容哈希未改动。"
+}

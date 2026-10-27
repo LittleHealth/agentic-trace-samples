@@ -1,0 +1,36 @@
+{
+  "all_passed": true,
+  "all_repository_local_markdown_links_resolve": true,
+  "checked_local_links": 330,
+  "original_sample_json_and_csv_unchanged": true,
+  "original_figures_unchanged": true,
+  "original_official_simulation_outputs_unchanged": true,
+  "numeric_day_and_week_metrics_unchanged": true,
+  "no_local_absolute_paths_in_published_text": true,
+  "samples": [
+    {
+      "directory": "01-append",
+      "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+      "requests": 44,
+      "raw_sha256": "b8da6b8f7da47516622c42b60f34bf75cb18eb9606d1615c95bdada896e88040"
+    },
+    {
+      "directory": "02-injection",
+      "session_id": "d3cf2b494fbb04a8d1850c2367f5fcdd",
+      "requests": 27,
+      "raw_sha256": "88e11e41edb579a4760bf824762d6e6e770712c23c2c2df556c1a4f89a51dc64"
+    },
+    {
+      "directory": "03-dropped-turns",
+      "session_id": "26b3e835fc1dc0d41af636b34005c880",
+      "requests": 46,
+      "raw_sha256": "d29faac9d44f28875a08769628d66aa5a8ca6efc82734f6cabaa186b8b08f65b"
+    }
+  ],
+  "publication_changes": [
+    "新增首页与目录入口",
+    "修正相对阅读链接",
+    "将本地路径规范化为来源或复现相对路径并注明",
+    "补充可移植的官方模拟和指标复现说明"
+  ]
+}

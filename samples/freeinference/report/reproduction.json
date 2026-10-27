@@ -1,0 +1,97 @@
+{
+  "dataset": "harvardMadsys/freeinference_agentic_trace",
+  "dataset_revision": "16d3c04dae6ccaa0c48a9064e204e3a8f1eb9ade",
+  "week": "2026-05-17_2026-05-23",
+  "upstream_url": "https://github.com/HarvardMadSys/freeinference_agentic_trace",
+  "upstream_commit": "925a718eed7cc01255e7dcea024e70389cf021e5",
+  "upstream_status": "",
+  "command": [
+    "python",
+    "-m",
+    "simulation",
+    "--week",
+    "2026-05-17",
+    "--release",
+    "../release",
+    "--output",
+    "../simulation",
+    "--processes",
+    "2"
+  ],
+  "cwd": "tmp/freeinference/upstream",
+  "download_and_verification_seconds": 13.042872667312622,
+  "files": [
+    {
+      "path": "release/2026-05-17_2026-05-23/manifest.json",
+      "bytes": 1394,
+      "sha256": "ee47aab41342750b6dd66388ee43891e4e0b28cdd203435b54ec9742528c5153"
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/processed/requests.parquet",
+      "bytes": 21989656,
+      "sha256": "6772d28dee9df407dac2064cf5758a481baf1b8576600965a8cbf47266844d90"
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/processed/sessions.parquet",
+      "bytes": 5014,
+      "sha256": "e905f1c1cbb1bac148aaffe7ff21509d4bae74897d87079f056ccf477af53ad8"
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/processed/tables.json",
+      "bytes": 589,
+      "sha256": "f180e956b380b63d6e872c5ca681a70a026e856cd4617b4903a3c48bbdcabc31"
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/processed/tool_calls.parquet",
+      "bytes": 167525,
+      "sha256": "80340f7eadd41f84fbce362eab7922cda2c80af836222d16b113aaae1a05e430"
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-17.jsonl.zst",
+      "bytes": 484429,
+      "sha256": "f768c3a44d6c7eb02340adcb7bceaf5a451e20dc568d7a96d69f78bfb70e09a8"
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-18.jsonl.zst",
+      "bytes": 334746,
+      "sha256": "553ce7e870a3f33b07f33dd513a20ed8828e6480dff21a63d08584b3a953bc33"
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-19.jsonl.zst",
+      "bytes": 2493421,
+      "sha256": "b750dada416518328f123dc1cab5d05a219b6467934a9860b79eb2656260df0b"
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-20.jsonl.zst",
+      "bytes": 103976,
+      "sha256": "ea26af1a19b0b33ee40d89f5007bfd67f66cf4ee574f8b8b2819b6b16865ec38"
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-21.jsonl.zst",
+      "bytes": 160758,
+      "sha256": "e855337d384114d7ffa219ca6fad05774c298b3647cfd1935e1cdc7d0e32ec9e"
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-22.jsonl.zst",
+      "bytes": 273898,
+      "sha256": "452215935300db1df89dfb10e5c85769f8b1d3ff6a10532c8a8abea1378eb6a0"
+    },
+    {
+      "path": "release/2026-05-17_2026-05-23/traces/2026-05-23.jsonl.zst",
+      "bytes": 168235,
+      "sha256": "546fbd81ce41eb0d4804f53268c8bede4bcceaa840212ce64bc1408ef97a3a20"
+    }
+  ],
+  "python": "3.12.13 (main, Aug  7 2026, 02:15:23) [Clang 22.1.3 ]",
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "pyarrow": "26.0.0",
+    "orjson": "3.13.0",
+    "huggingface-hub": "2.3.0",
+    "matplotlib": "3.11.2"
+  },
+  "simulation_exit_code": 0,
+  "total_seconds": 77.40287685394287,
+  "publication_note": "公开副本将本地 Python 路径、工作目录和输入/输出路径规范化为复现说明中的相对路径；数据/代码版本、文件哈希、耗时、版本及退出码未改动。"
+}

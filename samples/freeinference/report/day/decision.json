@@ -1,0 +1,16 @@
+{
+  "decision": "continue_one_week",
+  "basis": "exploratory descriptive evidence; made before weekly data analysis",
+  "evidence": {
+    "tool_input_share": 0.4057716061910218,
+    "previous_shared_share": 0.8804097120127198,
+    "median_peak_over_first": 1.7151150736056398,
+    "transitions": {
+      "initial": 25,
+      "append": 1163,
+      "mutation": 182,
+      "switch": 5
+    }
+  },
+  "conclusion": "工具消息占比、显著输入增长、可测的重复前缀和改写共同支持扩展一周，研究缓存与上下文维护的权衡；不支持语义压缩安全性结论。"
+}

@@ -1,0 +1,6520 @@
+{
+  "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+  "harness": "hermes",
+  "note": "block_ids 的完整数组见 trace.json；其余来源字段和工具骨架保留。",
+  "requests": [
+    {
+      "source_request": {
+        "step": 0,
+        "turn_index": 0,
+        "step_trigger": "user",
+        "link_reason": null,
+        "start_ms": 1779001582930,
+        "end_ms": 1779001588672,
+        "ttft_ms": 5734,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 11242,
+          "completion": 151,
+          "cached": 11136
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 8,
+          "assistant": 0,
+          "tool": 0,
+          "tool_definitions": 8638
+        },
+        "n_messages": 2,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": null,
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "Other",
+            "programs": [
+              "cd",
+              "python",
+              "echo",
+              "sqlite3"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cd <path> && python <path> --status 2> <path> || echo <str> && sqlite3 <path> <path> 2> <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "error",
+            "result_tokens": 842,
+            "latency_ms": 5272,
+            "subagent": null
+          },
+          {
+            "call_index": 1,
+            "name": "cronjob",
+            "category": "Other",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "action",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 795,
+            "latency_ms": 5272,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 651,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            28779,
+            28780,
+            28781,
+            28782,
+            157618,
+            157619,
+            157620,
+            157621
+          ],
+          "sha256_of_compact_json": "cccb5492fa7b6a92b21cde4d30466577b33695bef6d8a0f24ef1be2c3f6a5fd1"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 1,
+        "step": 0,
+        "turn_index": 0,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779001582930,
+        "end_ms": 1779001588672,
+        "gap_from_previous_completion_s": null,
+        "input_o200k": 10421,
+        "encoded_tokens": 10416,
+        "delta_input": null,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 8,
+        "role_assistant": 0,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 0,
+        "previous_shared_share": 0.0,
+        "session_seen_tokens": 0,
+        "session_seen_share": 0.0,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": null,
+        "n_messages": 2,
+        "transition": "initial",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 2,
+        "tool_names": "terminal; cronjob",
+        "tool_output_tokens": 1637,
+        "provider_prompt": 11242,
+        "provider_cached": 11136,
+        "provider_completion": 151
+      }
+    },
+    {
+      "source_request": {
+        "step": 1,
+        "turn_index": 0,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779001593944,
+        "end_ms": 1779001600397,
+        "ttft_ms": 6450,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 13081,
+          "completion": 147,
+          "cached": 11200
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 8,
+          "assistant": 142,
+          "tool": 1641,
+          "tool_definitions": 8638
+        },
+        "n_messages": 5,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "cd",
+              "ls",
+              "head"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cd <path> && ls -1d <path> 2> <path> | head -30"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 266,
+            "latency_ms": 3509,
+            "subagent": null
+          },
+          {
+            "call_index": 1,
+            "name": "terminal",
+            "category": "Other",
+            "programs": [
+              "cd",
+              "sqlite3"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cd <path> && sqlite3 <path> <str> 2> <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "error",
+            "result_tokens": 16,
+            "latency_ms": 3509,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 762,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            157725,
+            157726,
+            157727,
+            157728,
+            157729,
+            157730,
+            157731,
+            157732
+          ],
+          "sha256_of_compact_json": "fc67ebe4bea8f38d429b7df3f106fa5edfff7508e94d4e954abf884badf801e1"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 2,
+        "step": 1,
+        "turn_index": 0,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779001593944,
+        "end_ms": 1779001600397,
+        "gap_from_previous_completion_s": 5.272,
+        "input_o200k": 12204,
+        "encoded_tokens": 12192,
+        "delta_input": 1783,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 8,
+        "role_assistant": 142,
+        "role_tool": 1641,
+        "tool_input_share": 0.13446411012782694,
+        "previous_shared_tokens": 10416,
+        "previous_shared_share": 0.8543307086614174,
+        "session_seen_tokens": 10416,
+        "session_seen_share": 0.8543307086614174,
+        "warm_5m_shared_tokens": 10416,
+        "warm_15m_shared_tokens": 10416,
+        "same_model_provider_as_previous": true,
+        "n_messages": 5,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 2,
+        "tool_names": "terminal; terminal",
+        "tool_output_tokens": 282,
+        "provider_prompt": 13081,
+        "provider_cached": 11200,
+        "provider_completion": 147
+      }
+    },
+    {
+      "source_request": {
+        "step": 2,
+        "turn_index": 0,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779001603906,
+        "end_ms": 1779001608101,
+        "ttft_ms": 4195,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 13574,
+          "completion": 87,
+          "cached": 13056
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 8,
+          "assistant": 278,
+          "tool": 1927,
+          "tool_definitions": 8638
+        },
+        "n_messages": 8,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "cd",
+              "ls",
+              "wc",
+              "echo",
+              "ls",
+              "tail"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cd <path> && ls -1d <path> 2> <path> | wc -l && echo <str> && ls -1d <path> 2> <path> | tail -3"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 61,
+            "latency_ms": 2175,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 789,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            157752,
+            157753,
+            157754,
+            157755,
+            157756,
+            157757,
+            157758,
+            157759
+          ],
+          "sha256_of_compact_json": "bf14fc1d3c533e59a95221cf5d5143b3c31a9644dcc55a4b8f88560188c53dbf"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 3,
+        "step": 2,
+        "turn_index": 0,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779001603906,
+        "end_ms": 1779001608101,
+        "gap_from_previous_completion_s": 3.509,
+        "input_o200k": 12626,
+        "encoded_tokens": 12624,
+        "delta_input": 422,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 8,
+        "role_assistant": 278,
+        "role_tool": 1927,
+        "tool_input_share": 0.1526215745287502,
+        "previous_shared_tokens": 12192,
+        "previous_shared_share": 0.9657794676806084,
+        "session_seen_tokens": 12192,
+        "session_seen_share": 0.9657794676806084,
+        "warm_5m_shared_tokens": 12192,
+        "warm_15m_shared_tokens": 12192,
+        "same_model_provider_as_previous": true,
+        "n_messages": 8,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "terminal",
+        "tool_output_tokens": 61,
+        "provider_prompt": 13574,
+        "provider_cached": 13056,
+        "provider_completion": 87
+      }
+    },
+    {
+      "source_request": {
+        "step": 3,
+        "turn_index": 0,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779001610276,
+        "end_ms": 1779001617023,
+        "ttft_ms": 4781,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 13735,
+          "completion": 168,
+          "cached": 13568
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 8,
+          "assistant": 357,
+          "tool": 1990,
+          "tool_definitions": 8638
+        },
+        "n_messages": 10,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 798,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            157761,
+            157762,
+            157763,
+            157764,
+            157765,
+            157766,
+            157767,
+            157768
+          ],
+          "sha256_of_compact_json": "5dd24886651814d3114079ee5b0f9d6588301a8283e7e32cee5fb17eb63ebe42"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 4,
+        "step": 3,
+        "turn_index": 0,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779001610276,
+        "end_ms": 1779001617023,
+        "gap_from_previous_completion_s": 2.175,
+        "input_o200k": 12768,
+        "encoded_tokens": 12768,
+        "delta_input": 142,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 8,
+        "role_assistant": 357,
+        "role_tool": 1990,
+        "tool_input_share": 0.15585839598997495,
+        "previous_shared_tokens": 12624,
+        "previous_shared_share": 0.9887218045112782,
+        "session_seen_tokens": 12624,
+        "session_seen_share": 0.9887218045112782,
+        "warm_5m_shared_tokens": 12624,
+        "warm_15m_shared_tokens": 12624,
+        "same_model_provider_as_previous": true,
+        "n_messages": 10,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 13735,
+        "provider_cached": 13568,
+        "provider_completion": 168
+      }
+    },
+    {
+      "source_request": {
+        "step": 4,
+        "turn_index": 1,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779003931168,
+        "end_ms": 1779003938327,
+        "ttft_ms": 7153,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 13880,
+          "completion": 55,
+          "cached": 9344
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 35,
+          "assistant": 525,
+          "tool": 1990,
+          "tool_definitions": 8638
+        },
+        "n_messages": 12,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "process",
+            "category": "Other",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "action",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 6,
+            "latency_ms": 4653,
+            "subagent": null
+          },
+          {
+            "call_index": 1,
+            "name": "cronjob",
+            "category": "Other",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "action",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 505,
+            "latency_ms": 4653,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 810,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            157773,
+            157774,
+            157775,
+            157776,
+            157777,
+            157778,
+            157779,
+            157780
+          ],
+          "sha256_of_compact_json": "7ea45c329cef5e24ad2f0ccadd58ec4ecfcea6176c5f35886d13c4f4834d8fbe"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 5,
+        "step": 4,
+        "turn_index": 1,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779003931168,
+        "end_ms": 1779003938327,
+        "gap_from_previous_completion_s": 2314.145,
+        "input_o200k": 12963,
+        "encoded_tokens": 12960,
+        "delta_input": 195,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 35,
+        "role_assistant": 525,
+        "role_tool": 1990,
+        "tool_input_share": 0.153513847103294,
+        "previous_shared_tokens": 12768,
+        "previous_shared_share": 0.9851851851851852,
+        "session_seen_tokens": 12768,
+        "session_seen_share": 0.9851851851851852,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": true,
+        "n_messages": 12,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 2,
+        "tool_names": "process; cronjob",
+        "tool_output_tokens": 511,
+        "provider_prompt": 13880,
+        "provider_cached": 9344,
+        "provider_completion": 55
+      }
+    },
+    {
+      "source_request": {
+        "step": 5,
+        "turn_index": 1,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779003942980,
+        "end_ms": 1779003948579,
+        "ttft_ms": 5598,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 14470,
+          "completion": 40,
+          "cached": 13824
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 35,
+          "assistant": 573,
+          "tool": 2505,
+          "tool_definitions": 8638
+        },
+        "n_messages": 15,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "ps",
+              "grep",
+              "grep"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "ps <str> | grep -i <path> | grep -v <str>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 154,
+            "latency_ms": 2976,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 845,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            157808,
+            157809,
+            157810,
+            157811,
+            157812,
+            157813,
+            157814,
+            157815
+          ],
+          "sha256_of_compact_json": "9dcb706b0e1d886c5f0d84cfdb822aa8afc842d33bb9dc5f62fa4a93fa5cba1e"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 6,
+        "step": 5,
+        "turn_index": 1,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779003942980,
+        "end_ms": 1779003948579,
+        "gap_from_previous_completion_s": 4.653,
+        "input_o200k": 13526,
+        "encoded_tokens": 13520,
+        "delta_input": 563,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 35,
+        "role_assistant": 573,
+        "role_tool": 2505,
+        "tool_input_share": 0.18519887623835576,
+        "previous_shared_tokens": 12960,
+        "previous_shared_share": 0.9585798816568047,
+        "session_seen_tokens": 12960,
+        "session_seen_share": 0.9585798816568047,
+        "warm_5m_shared_tokens": 12960,
+        "warm_15m_shared_tokens": 12960,
+        "same_model_provider_as_previous": true,
+        "n_messages": 15,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "terminal",
+        "tool_output_tokens": 154,
+        "provider_prompt": 14470,
+        "provider_cached": 13824,
+        "provider_completion": 40
+      }
+    },
+    {
+      "source_request": {
+        "step": 6,
+        "turn_index": 1,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779003951555,
+        "end_ms": 1779003960261,
+        "ttft_ms": 8705,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 14674,
+          "completion": 254,
+          "cached": 14464
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 35,
+          "assistant": 608,
+          "tool": 2661,
+          "tool_definitions": 8638
+        },
+        "n_messages": 17,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "ps",
+              "echo",
+              "pgrep",
+              "head"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "ps -p <num> -o <str> 2> <path> && echo <str> && pgrep -P <num> 2> <path> | head -5"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 139,
+            "latency_ms": 4841,
+            "subagent": null
+          },
+          {
+            "call_index": 1,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "ls",
+              "ls",
+              "echo"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "ls -la <path> 2> <path> || ls -la <path> 2> <path> || echo <str>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 22,
+            "latency_ms": 4841,
+            "subagent": null
+          },
+          {
+            "call_index": 2,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "ls",
+              "head",
+              "ls",
+              "head",
+              "echo"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "ls -lt <path> 2> <path> | head -5 || ls -lt <path> 2> <path> | head -5 || echo <str>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 82,
+            "latency_ms": 4841,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 857,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            157820,
+            157821,
+            157822,
+            157823,
+            157824,
+            157825,
+            157826,
+            157827
+          ],
+          "sha256_of_compact_json": "442d7e50d1cc2526dd4036626aab2fdcccfa8d411026f26d4fbd7e035f91578c"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 7,
+        "step": 6,
+        "turn_index": 1,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779003951555,
+        "end_ms": 1779003960261,
+        "gap_from_previous_completion_s": 2.976,
+        "input_o200k": 13717,
+        "encoded_tokens": 13712,
+        "delta_input": 191,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 35,
+        "role_assistant": 608,
+        "role_tool": 2661,
+        "tool_input_share": 0.19399285558066634,
+        "previous_shared_tokens": 13520,
+        "previous_shared_share": 0.9859976662777129,
+        "session_seen_tokens": 13520,
+        "session_seen_share": 0.9859976662777129,
+        "warm_5m_shared_tokens": 13520,
+        "warm_15m_shared_tokens": 13520,
+        "same_model_provider_as_previous": true,
+        "n_messages": 17,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 3,
+        "tool_names": "terminal; terminal; terminal",
+        "tool_output_tokens": 243,
+        "provider_prompt": 14674,
+        "provider_cached": 14464,
+        "provider_completion": 254
+      }
+    },
+    {
+      "source_request": {
+        "step": 7,
+        "turn_index": 1,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779003965102,
+        "end_ms": 1779003972223,
+        "ttft_ms": 7120,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 15183,
+          "completion": 215,
+          "cached": 14656
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 35,
+          "assistant": 844,
+          "tool": 2910,
+          "tool_definitions": 8638
+        },
+        "n_messages": 21,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "head"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "head -80 <path> 2> <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 810,
+            "latency_ms": 5064,
+            "subagent": null
+          },
+          {
+            "call_index": 1,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "cd",
+              "ls",
+              "wc",
+              "echo",
+              "ls"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cd <path> && ls -1d <path> <path> 2> <path> | wc -l && echo <str> && ls -1d <path> 2> <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "error",
+            "result_tokens": 29,
+            "latency_ms": 5064,
+            "subagent": null
+          },
+          {
+            "call_index": 2,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "ps"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "ps -p <num> -o <str> 2> <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 106,
+            "latency_ms": 5064,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 887,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            157850,
+            157851,
+            157852,
+            157853,
+            157854,
+            157855,
+            157856,
+            157857
+          ],
+          "sha256_of_compact_json": "75bf7dbbfa972f500f34b305f01de4e0c3656ea4283ea1c104651811f6159698"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 8,
+        "step": 7,
+        "turn_index": 1,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779003965102,
+        "end_ms": 1779003972223,
+        "gap_from_previous_completion_s": 4.841,
+        "input_o200k": 14202,
+        "encoded_tokens": 14192,
+        "delta_input": 485,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 35,
+        "role_assistant": 844,
+        "role_tool": 2910,
+        "tool_input_share": 0.204900718208703,
+        "previous_shared_tokens": 13712,
+        "previous_shared_share": 0.9661781285231116,
+        "session_seen_tokens": 13712,
+        "session_seen_share": 0.9661781285231116,
+        "warm_5m_shared_tokens": 13712,
+        "warm_15m_shared_tokens": 13712,
+        "same_model_provider_as_previous": true,
+        "n_messages": 21,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 3,
+        "tool_names": "terminal; terminal; terminal",
+        "tool_output_tokens": 945,
+        "provider_prompt": 15183,
+        "provider_cached": 14656,
+        "provider_completion": 215
+      }
+    },
+    {
+      "source_request": {
+        "step": 8,
+        "turn_index": 1,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779003977287,
+        "end_ms": 1779003981831,
+        "ttft_ms": 4543,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 16343,
+          "completion": 95,
+          "cached": 15168
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 35,
+          "assistant": 1040,
+          "tool": 3861,
+          "tool_definitions": 8638
+        },
+        "n_messages": 25,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "cat"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cat <path> 2> <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 171,
+            "latency_ms": 3426,
+            "subagent": null
+          },
+          {
+            "call_index": 1,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "tail"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "tail -20 <path> 2> <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 17996,
+            "latency_ms": 3426,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 959,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            157922,
+            157923,
+            157924,
+            157925,
+            157926,
+            157927,
+            157928,
+            157929
+          ],
+          "sha256_of_compact_json": "b1b0d69055ad070d9e490f16ce0d5b985736e03ac11cafd6be16b336f6e1d6cd"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 9,
+        "step": 8,
+        "turn_index": 1,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779003977287,
+        "end_ms": 1779003981831,
+        "gap_from_previous_completion_s": 5.064,
+        "input_o200k": 15349,
+        "encoded_tokens": 15344,
+        "delta_input": 1147,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 35,
+        "role_assistant": 1040,
+        "role_tool": 3861,
+        "tool_input_share": 0.25154733207375074,
+        "previous_shared_tokens": 14192,
+        "previous_shared_share": 0.9249217935349322,
+        "session_seen_tokens": 14192,
+        "session_seen_share": 0.9249217935349322,
+        "warm_5m_shared_tokens": 14192,
+        "warm_15m_shared_tokens": 14192,
+        "same_model_provider_as_previous": true,
+        "n_messages": 25,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 2,
+        "tool_names": "terminal; terminal",
+        "tool_output_tokens": 18167,
+        "provider_prompt": 16343,
+        "provider_cached": 15168,
+        "provider_completion": 95
+      }
+    },
+    {
+      "source_request": {
+        "step": 9,
+        "turn_index": 1,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779003985257,
+        "end_ms": 1779003994777,
+        "ttft_ms": 5529,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 35140,
+          "completion": 268,
+          "cached": 16320
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 35,
+          "assistant": 1123,
+          "tool": 22032,
+          "tool_definitions": 8638
+        },
+        "n_messages": 28,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 2100,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159063,
+            159064,
+            159065,
+            159066,
+            159067,
+            159068,
+            159069,
+            159070
+          ],
+          "sha256_of_compact_json": "28b84c3a68e58660668bae7d87ad2c91d4b8affaedecd9cff3295eb884ddc5d7"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 10,
+        "step": 9,
+        "turn_index": 1,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779003985257,
+        "end_ms": 1779003994777,
+        "gap_from_previous_completion_s": 3.426,
+        "input_o200k": 33603,
+        "encoded_tokens": 33600,
+        "delta_input": 18254,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 35,
+        "role_assistant": 1123,
+        "role_tool": 22032,
+        "tool_input_share": 0.6556557450227658,
+        "previous_shared_tokens": 15344,
+        "previous_shared_share": 0.45666666666666667,
+        "session_seen_tokens": 15344,
+        "session_seen_share": 0.45666666666666667,
+        "warm_5m_shared_tokens": 15344,
+        "warm_15m_shared_tokens": 15344,
+        "same_model_provider_as_previous": true,
+        "n_messages": 28,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 35140,
+        "provider_cached": 16320,
+        "provider_completion": 268
+      }
+    },
+    {
+      "source_request": {
+        "step": 10,
+        "turn_index": 2,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779006102866,
+        "end_ms": 1779006109459,
+        "ttft_ms": 6590,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 35375,
+          "completion": 59,
+          "cached": 9344
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 42,
+          "assistant": 1389,
+          "tool": 22032,
+          "tool_definitions": 8638
+        },
+        "n_messages": 30,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "cat"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cat <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 170,
+            "latency_ms": 4797,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2117,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159080,
+            159081,
+            159082,
+            159083,
+            159084,
+            159085,
+            159086,
+            159087
+          ],
+          "sha256_of_compact_json": "940ddfba2b5055fcccc025d6dff7228d451dd883c460e548d9506168464dee34"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 11,
+        "step": 10,
+        "turn_index": 2,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779006102866,
+        "end_ms": 1779006109459,
+        "gap_from_previous_completion_s": 2108.089,
+        "input_o200k": 33876,
+        "encoded_tokens": 33872,
+        "delta_input": 273,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 42,
+        "role_assistant": 1389,
+        "role_tool": 22032,
+        "tool_input_share": 0.6503719447396387,
+        "previous_shared_tokens": 33600,
+        "previous_shared_share": 0.9919697685403873,
+        "session_seen_tokens": 33600,
+        "session_seen_share": 0.9919697685403873,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": true,
+        "n_messages": 30,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 1,
+        "tool_names": "terminal",
+        "tool_output_tokens": 170,
+        "provider_prompt": 35375,
+        "provider_cached": 9344,
+        "provider_completion": 59
+      }
+    },
+    {
+      "source_request": {
+        "step": 11,
+        "turn_index": 2,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779006114256,
+        "end_ms": 1779006121137,
+        "ttft_ms": 6872,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 35617,
+          "completion": 68,
+          "cached": 35328
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 42,
+          "assistant": 1442,
+          "tool": 22204,
+          "tool_definitions": 8638
+        },
+        "n_messages": 32,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 2131,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159094,
+            159095,
+            159096,
+            159097,
+            159098,
+            159099,
+            159100,
+            159101
+          ],
+          "sha256_of_compact_json": "10878cf8bdb0ae71e669340b8f0159178ddb64c09fc2839efa6bf39281c2af2a"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 12,
+        "step": 11,
+        "turn_index": 2,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779006114256,
+        "end_ms": 1779006121137,
+        "gap_from_previous_completion_s": 4.797,
+        "input_o200k": 34101,
+        "encoded_tokens": 34096,
+        "delta_input": 225,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 42,
+        "role_assistant": 1442,
+        "role_tool": 22204,
+        "tool_input_share": 0.6511246004515997,
+        "previous_shared_tokens": 33872,
+        "previous_shared_share": 0.993430314406382,
+        "session_seen_tokens": 33872,
+        "session_seen_share": 0.993430314406382,
+        "warm_5m_shared_tokens": 33872,
+        "warm_15m_shared_tokens": 33872,
+        "same_model_provider_as_previous": true,
+        "n_messages": 32,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 35617,
+        "provider_cached": 35328,
+        "provider_completion": 68
+      }
+    },
+    {
+      "source_request": {
+        "step": 12,
+        "turn_index": 3,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779008571000,
+        "end_ms": 1779008575536,
+        "ttft_ms": 4535,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 35673,
+          "completion": 42,
+          "cached": 9344
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 49,
+          "assistant": 1504,
+          "tool": 22204,
+          "tool_definitions": 8638
+        },
+        "n_messages": 34,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "cat"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cat <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 172,
+            "latency_ms": 4665,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2135,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159098,
+            159099,
+            159100,
+            159101,
+            159102,
+            159103,
+            159104,
+            159105
+          ],
+          "sha256_of_compact_json": "c37bd973e28fa6a11f8620a8847f8097b99a6ebf28807796fc4bf31c6ba76c9d"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 13,
+        "step": 12,
+        "turn_index": 3,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779008571000,
+        "end_ms": 1779008575536,
+        "gap_from_previous_completion_s": 2449.863,
+        "input_o200k": 34170,
+        "encoded_tokens": 34160,
+        "delta_input": 69,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 49,
+        "role_assistant": 1504,
+        "role_tool": 22204,
+        "tool_input_share": 0.6498097746561311,
+        "previous_shared_tokens": 34096,
+        "previous_shared_share": 0.9981264637002342,
+        "session_seen_tokens": 34096,
+        "session_seen_share": 0.9981264637002342,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": true,
+        "n_messages": 34,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 1,
+        "tool_names": "terminal",
+        "tool_output_tokens": 172,
+        "provider_prompt": 35673,
+        "provider_cached": 9344,
+        "provider_completion": 42
+      }
+    },
+    {
+      "source_request": {
+        "step": 13,
+        "turn_index": 3,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779008580201,
+        "end_ms": 1779008586990,
+        "ttft_ms": 6783,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 35900,
+          "completion": 43,
+          "cached": 35648
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 49,
+          "assistant": 1540,
+          "tool": 22378,
+          "tool_definitions": 8638
+        },
+        "n_messages": 36,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 2148,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159111,
+            159112,
+            159113,
+            159114,
+            159115,
+            159116,
+            159117,
+            159118
+          ],
+          "sha256_of_compact_json": "8506c1d6883db5c808962feb2b6db853af03942f4fc21f7cd14250ea542ee4f8"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 14,
+        "step": 13,
+        "turn_index": 3,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779008580201,
+        "end_ms": 1779008586990,
+        "gap_from_previous_completion_s": 4.665,
+        "input_o200k": 34380,
+        "encoded_tokens": 34368,
+        "delta_input": 210,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 49,
+        "role_assistant": 1540,
+        "role_tool": 22378,
+        "tool_input_share": 0.6509016870273415,
+        "previous_shared_tokens": 34160,
+        "previous_shared_share": 0.9939478584729982,
+        "session_seen_tokens": 34160,
+        "session_seen_share": 0.9939478584729982,
+        "warm_5m_shared_tokens": 34160,
+        "warm_15m_shared_tokens": 34160,
+        "same_model_provider_as_previous": true,
+        "n_messages": 36,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 35900,
+        "provider_cached": 35648,
+        "provider_completion": 43
+      }
+    },
+    {
+      "source_request": {
+        "step": 14,
+        "turn_index": 4,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779010178314,
+        "end_ms": 1779010183289,
+        "ttft_ms": 4973,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 35948,
+          "completion": 42,
+          "cached": 9344
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 56,
+          "assistant": 1578,
+          "tool": 22378,
+          "tool_definitions": 8638
+        },
+        "n_messages": 38,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "cat"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cat <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 171,
+            "latency_ms": 5677,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2151,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159114,
+            159115,
+            159116,
+            159117,
+            159118,
+            159119,
+            159120,
+            159121
+          ],
+          "sha256_of_compact_json": "28463ec5cf6c3496829c2c752e78bbc7b9d3cfeaf9120c4d684b17c53c357c3a"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 15,
+        "step": 14,
+        "turn_index": 4,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779010178314,
+        "end_ms": 1779010183289,
+        "gap_from_previous_completion_s": 1591.324,
+        "input_o200k": 34425,
+        "encoded_tokens": 34416,
+        "delta_input": 45,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 56,
+        "role_assistant": 1578,
+        "role_tool": 22378,
+        "tool_input_share": 0.6500508351488744,
+        "previous_shared_tokens": 34368,
+        "previous_shared_share": 0.99860529986053,
+        "session_seen_tokens": 34368,
+        "session_seen_share": 0.99860529986053,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": true,
+        "n_messages": 38,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 1,
+        "tool_names": "terminal",
+        "tool_output_tokens": 171,
+        "provider_prompt": 35948,
+        "provider_cached": 9344,
+        "provider_completion": 42
+      }
+    },
+    {
+      "source_request": {
+        "step": 15,
+        "turn_index": 4,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779010188966,
+        "end_ms": 1779010191767,
+        "ttft_ms": 2795,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 36174,
+          "completion": 42,
+          "cached": 35904
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 56,
+          "assistant": 1614,
+          "tool": 22551,
+          "tool_definitions": 8638
+        },
+        "n_messages": 40,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 2164,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159127,
+            159128,
+            159129,
+            159130,
+            159131,
+            159132,
+            159133,
+            159134
+          ],
+          "sha256_of_compact_json": "11c4ccfd069f4d69ada2078eb0bd6acf38e0571054b37cbd3e45565a8c67d4da"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 16,
+        "step": 15,
+        "turn_index": 4,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779010188966,
+        "end_ms": 1779010191767,
+        "gap_from_previous_completion_s": 5.677,
+        "input_o200k": 34634,
+        "encoded_tokens": 34624,
+        "delta_input": 209,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 56,
+        "role_assistant": 1614,
+        "role_tool": 22551,
+        "tool_input_share": 0.6511231737598892,
+        "previous_shared_tokens": 34416,
+        "previous_shared_share": 0.993992606284658,
+        "session_seen_tokens": 34416,
+        "session_seen_share": 0.993992606284658,
+        "warm_5m_shared_tokens": 34416,
+        "warm_15m_shared_tokens": 34416,
+        "same_model_provider_as_previous": true,
+        "n_messages": 40,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 36174,
+        "provider_cached": 35904,
+        "provider_completion": 42
+      }
+    },
+    {
+      "source_request": {
+        "step": 16,
+        "turn_index": 5,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779012370633,
+        "end_ms": 1779012375961,
+        "ttft_ms": 5326,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 36221,
+          "completion": 44,
+          "cached": 7872
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 63,
+          "assistant": 1651,
+          "tool": 22551,
+          "tool_definitions": 8638
+        },
+        "n_messages": 42,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "cat"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cat <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 172,
+            "latency_ms": 5365,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2167,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159130,
+            159131,
+            159132,
+            159133,
+            159134,
+            159135,
+            159136,
+            159137
+          ],
+          "sha256_of_compact_json": "4ebf6a6a3c67996b5ca6764e8b900469aafea23aad59a41daf62f71d5464ce76"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 17,
+        "step": 16,
+        "turn_index": 5,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779012370633,
+        "end_ms": 1779012375961,
+        "gap_from_previous_completion_s": 2178.866,
+        "input_o200k": 34678,
+        "encoded_tokens": 34672,
+        "delta_input": 44,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 63,
+        "role_assistant": 1651,
+        "role_tool": 22551,
+        "tool_input_share": 0.6502970182824845,
+        "previous_shared_tokens": 34624,
+        "previous_shared_share": 0.9986155976003692,
+        "session_seen_tokens": 34624,
+        "session_seen_share": 0.9986155976003692,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": true,
+        "n_messages": 42,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 1,
+        "tool_names": "terminal",
+        "tool_output_tokens": 172,
+        "provider_prompt": 36221,
+        "provider_cached": 7872,
+        "provider_completion": 44
+      }
+    },
+    {
+      "source_request": {
+        "step": 17,
+        "turn_index": 5,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779012381326,
+        "end_ms": 1779012387784,
+        "ttft_ms": 6453,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 36449,
+          "completion": 42,
+          "cached": 36160
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 63,
+          "assistant": 1690,
+          "tool": 22725,
+          "tool_definitions": 8638
+        },
+        "n_messages": 44,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 2180,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159143,
+            159144,
+            159145,
+            159146,
+            159147,
+            159148,
+            159149,
+            159150
+          ],
+          "sha256_of_compact_json": "e1733f23351ba2dc81a6d5e83bf1415921a39d89ec9d500e1d0f508535068c3b"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 18,
+        "step": 17,
+        "turn_index": 5,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779012381326,
+        "end_ms": 1779012387784,
+        "gap_from_previous_completion_s": 5.365,
+        "input_o200k": 34891,
+        "encoded_tokens": 34880,
+        "delta_input": 213,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 63,
+        "role_assistant": 1690,
+        "role_tool": 22725,
+        "tool_input_share": 0.6513140924593734,
+        "previous_shared_tokens": 34672,
+        "previous_shared_share": 0.9940366972477064,
+        "session_seen_tokens": 34672,
+        "session_seen_share": 0.9940366972477064,
+        "warm_5m_shared_tokens": 34672,
+        "warm_15m_shared_tokens": 34672,
+        "same_model_provider_as_previous": true,
+        "n_messages": 44,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 36449,
+        "provider_cached": 36160,
+        "provider_completion": 42
+      }
+    },
+    {
+      "source_request": {
+        "step": 18,
+        "turn_index": 6,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779020348024,
+        "end_ms": 1779020352855,
+        "ttft_ms": 4830,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 36494,
+          "completion": 42,
+          "cached": 7872
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 70,
+          "assistant": 1728,
+          "tool": 22725,
+          "tool_definitions": 8638
+        },
+        "n_messages": 46,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "cat"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cat <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 172,
+            "latency_ms": 4477,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2183,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159146,
+            159147,
+            159148,
+            159149,
+            159150,
+            159151,
+            159152,
+            159153
+          ],
+          "sha256_of_compact_json": "7a38179891530022e638b505ccb6c000be3b2b14e0fa19e6ad429228263ebb9a"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 19,
+        "step": 18,
+        "turn_index": 6,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779020348024,
+        "end_ms": 1779020352855,
+        "gap_from_previous_completion_s": 7960.24,
+        "input_o200k": 34936,
+        "encoded_tokens": 34928,
+        "delta_input": 45,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 70,
+        "role_assistant": 1728,
+        "role_tool": 22725,
+        "tool_input_share": 0.6504751545683536,
+        "previous_shared_tokens": 34880,
+        "previous_shared_share": 0.9986257443884563,
+        "session_seen_tokens": 34880,
+        "session_seen_share": 0.9986257443884563,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": true,
+        "n_messages": 46,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 1,
+        "tool_names": "terminal",
+        "tool_output_tokens": 172,
+        "provider_prompt": 36494,
+        "provider_cached": 7872,
+        "provider_completion": 42
+      }
+    },
+    {
+      "source_request": {
+        "step": 19,
+        "turn_index": 6,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779020357332,
+        "end_ms": 1779020362609,
+        "ttft_ms": 5042,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 36718,
+          "completion": 104,
+          "cached": 36480
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 70,
+          "assistant": 1764,
+          "tool": 22899,
+          "tool_definitions": 8638
+        },
+        "n_messages": 48,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 2196,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159159,
+            159160,
+            159161,
+            159162,
+            159163,
+            159164,
+            159165,
+            159166
+          ],
+          "sha256_of_compact_json": "6a70f1344a247d758ec51f7b4fe9b8e27a34b38e2d527e0ed62581fbf2962b99"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 20,
+        "step": 19,
+        "turn_index": 6,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779020357332,
+        "end_ms": 1779020362609,
+        "gap_from_previous_completion_s": 4.477,
+        "input_o200k": 35146,
+        "encoded_tokens": 35136,
+        "delta_input": 210,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 70,
+        "role_assistant": 1764,
+        "role_tool": 22899,
+        "tool_input_share": 0.6515392932339384,
+        "previous_shared_tokens": 34928,
+        "previous_shared_share": 0.99408014571949,
+        "session_seen_tokens": 34928,
+        "session_seen_share": 0.99408014571949,
+        "warm_5m_shared_tokens": 34928,
+        "warm_15m_shared_tokens": 34928,
+        "same_model_provider_as_previous": true,
+        "n_messages": 48,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 36718,
+        "provider_cached": 36480,
+        "provider_completion": 104
+      }
+    },
+    {
+      "source_request": {
+        "step": 20,
+        "turn_index": 7,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779021114545,
+        "end_ms": 1779021118282,
+        "ttft_ms": 3736,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 36827,
+          "completion": 42,
+          "cached": 36480
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 77,
+          "assistant": 1865,
+          "tool": 22899,
+          "tool_definitions": 8638
+        },
+        "n_messages": 50,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "cat"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cat <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 171,
+            "latency_ms": 4746,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2203,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159166,
+            159167,
+            159168,
+            159169,
+            159170,
+            159171,
+            159172,
+            159173
+          ],
+          "sha256_of_compact_json": "f821c459f805799022922c0927e3a36ab699501bb4e39e4de2d68d4ad69c9f47"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 21,
+        "step": 20,
+        "turn_index": 7,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779021114545,
+        "end_ms": 1779021118282,
+        "gap_from_previous_completion_s": 751.936,
+        "input_o200k": 35254,
+        "encoded_tokens": 35248,
+        "delta_input": 108,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 77,
+        "role_assistant": 1865,
+        "role_tool": 22899,
+        "tool_input_share": 0.6495433142338458,
+        "previous_shared_tokens": 35136,
+        "previous_shared_share": 0.9968225147526101,
+        "session_seen_tokens": 35136,
+        "session_seen_share": 0.9968225147526101,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 35136,
+        "same_model_provider_as_previous": true,
+        "n_messages": 50,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 1,
+        "tool_names": "terminal",
+        "tool_output_tokens": 171,
+        "provider_prompt": 36827,
+        "provider_cached": 36480,
+        "provider_completion": 42
+      }
+    },
+    {
+      "source_request": {
+        "step": 21,
+        "turn_index": 7,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779021123028,
+        "end_ms": 1779021128496,
+        "ttft_ms": 5463,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 37049,
+          "completion": 40,
+          "cached": 36800
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 77,
+          "assistant": 1901,
+          "tool": 23072,
+          "tool_definitions": 8638
+        },
+        "n_messages": 52,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 2216,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159179,
+            159180,
+            159181,
+            159182,
+            159183,
+            159184,
+            159185,
+            159186
+          ],
+          "sha256_of_compact_json": "e50d1059a643353509aee466d1dc50566e5f0dcc34fc14ee15821521e9cf4ab3"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 22,
+        "step": 21,
+        "turn_index": 7,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779021123028,
+        "end_ms": 1779021128496,
+        "gap_from_previous_completion_s": 4.746,
+        "input_o200k": 35463,
+        "encoded_tokens": 35456,
+        "delta_input": 209,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 77,
+        "role_assistant": 1901,
+        "role_tool": 23072,
+        "tool_input_share": 0.6505935764035755,
+        "previous_shared_tokens": 35248,
+        "previous_shared_share": 0.9941335740072202,
+        "session_seen_tokens": 35248,
+        "session_seen_share": 0.9941335740072202,
+        "warm_5m_shared_tokens": 35248,
+        "warm_15m_shared_tokens": 35248,
+        "same_model_provider_as_previous": true,
+        "n_messages": 52,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 37049,
+        "provider_cached": 36800,
+        "provider_completion": 40
+      }
+    },
+    {
+      "source_request": {
+        "step": 22,
+        "turn_index": 8,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779021626264,
+        "end_ms": 1779021630993,
+        "ttft_ms": 4728,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 37094,
+          "completion": 42,
+          "cached": 36800
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 84,
+          "assistant": 1938,
+          "tool": 23072,
+          "tool_definitions": 8638
+        },
+        "n_messages": 54,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "cat"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cat <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 171,
+            "latency_ms": 4437,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2219,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159182,
+            159183,
+            159184,
+            159185,
+            159186,
+            159187,
+            159188,
+            159189
+          ],
+          "sha256_of_compact_json": "b71f183412a31ede9b4825002bf136e97de5f8fafb70bf2ffbf0d10d5456add0"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 23,
+        "step": 22,
+        "turn_index": 8,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779021626264,
+        "end_ms": 1779021630993,
+        "gap_from_previous_completion_s": 497.768,
+        "input_o200k": 35507,
+        "encoded_tokens": 35504,
+        "delta_input": 44,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 84,
+        "role_assistant": 1938,
+        "role_tool": 23072,
+        "tool_input_share": 0.6497873658715183,
+        "previous_shared_tokens": 35456,
+        "previous_shared_share": 0.9986480396575034,
+        "session_seen_tokens": 35456,
+        "session_seen_share": 0.9986480396575034,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 35456,
+        "same_model_provider_as_previous": true,
+        "n_messages": 54,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 1,
+        "tool_names": "terminal",
+        "tool_output_tokens": 171,
+        "provider_prompt": 37094,
+        "provider_cached": 36800,
+        "provider_completion": 42
+      }
+    },
+    {
+      "source_request": {
+        "step": 23,
+        "turn_index": 8,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779021635430,
+        "end_ms": 1779021646257,
+        "ttft_ms": 10821,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 37316,
+          "completion": 42,
+          "cached": 37056
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 84,
+          "assistant": 1974,
+          "tool": 23245,
+          "tool_definitions": 8638
+        },
+        "n_messages": 56,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 2232,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159195,
+            159196,
+            159197,
+            159198,
+            159199,
+            159200,
+            159201,
+            159202
+          ],
+          "sha256_of_compact_json": "8dc602f655ef7c234724e4ef3b4e362347c5b51e6eb1f419791211bbea83f7f9"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 24,
+        "step": 23,
+        "turn_index": 8,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779021635430,
+        "end_ms": 1779021646257,
+        "gap_from_previous_completion_s": 4.437,
+        "input_o200k": 35716,
+        "encoded_tokens": 35712,
+        "delta_input": 209,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 84,
+        "role_assistant": 1974,
+        "role_tool": 23245,
+        "tool_input_share": 0.6508287602195094,
+        "previous_shared_tokens": 35504,
+        "previous_shared_share": 0.9941756272401434,
+        "session_seen_tokens": 35504,
+        "session_seen_share": 0.9941756272401434,
+        "warm_5m_shared_tokens": 35504,
+        "warm_15m_shared_tokens": 35504,
+        "same_model_provider_as_previous": true,
+        "n_messages": 56,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 37316,
+        "provider_cached": 37056,
+        "provider_completion": 42
+      }
+    },
+    {
+      "source_request": {
+        "step": 24,
+        "turn_index": 9,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779023728819,
+        "end_ms": 1779023734928,
+        "ttft_ms": 6107,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 37362,
+          "completion": 91,
+          "cached": 9344
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 91,
+          "assistant": 2018,
+          "tool": 23245,
+          "tool_definitions": 8638
+        },
+        "n_messages": 58,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*Wait/Poll",
+            "programs": [
+              "kill",
+              "sleep",
+              "ps",
+              "echo",
+              "echo"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "kill <num> && sleep <num> && ps -p <num> 2> <path> && echo <str> || echo <str>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 28,
+            "latency_ms": 8709,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2235,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159198,
+            159199,
+            159200,
+            159201,
+            159202,
+            159203,
+            159204,
+            159205
+          ],
+          "sha256_of_compact_json": "292d067a11d09e9fe2e72ed256293eee0495cc39fdc058b4a2a31bdcf04d2555"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 25,
+        "step": 24,
+        "turn_index": 9,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779023728819,
+        "end_ms": 1779023734928,
+        "gap_from_previous_completion_s": 2082.562,
+        "input_o200k": 35767,
+        "encoded_tokens": 35760,
+        "delta_input": 51,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 91,
+        "role_assistant": 2018,
+        "role_tool": 23245,
+        "tool_input_share": 0.6499007464981688,
+        "previous_shared_tokens": 35712,
+        "previous_shared_share": 0.9986577181208054,
+        "session_seen_tokens": 35712,
+        "session_seen_share": 0.9986577181208054,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": true,
+        "n_messages": 58,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 1,
+        "tool_names": "terminal",
+        "tool_output_tokens": 28,
+        "provider_prompt": 37362,
+        "provider_cached": 9344,
+        "provider_completion": 91
+      }
+    },
+    {
+      "source_request": {
+        "step": 25,
+        "turn_index": 9,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779023743637,
+        "end_ms": 1779023750389,
+        "ttft_ms": 6751,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 37484,
+          "completion": 44,
+          "cached": 37312
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 91,
+          "assistant": 2103,
+          "tool": 23275,
+          "tool_definitions": 8638
+        },
+        "n_messages": 60,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "rm"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "rm -f <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 16,
+            "latency_ms": 2897,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2242,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159205,
+            159206,
+            159207,
+            159208,
+            159209,
+            159210,
+            159211,
+            159212
+          ],
+          "sha256_of_compact_json": "e7b3a07de2d80e089366691d526cb5f1642dcbb7f0ef645640cdeada0ab9d228"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 26,
+        "step": 25,
+        "turn_index": 9,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779023743637,
+        "end_ms": 1779023750389,
+        "gap_from_previous_completion_s": 8.709,
+        "input_o200k": 35882,
+        "encoded_tokens": 35872,
+        "delta_input": 115,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 91,
+        "role_assistant": 2103,
+        "role_tool": 23275,
+        "tool_input_share": 0.64865392118611,
+        "previous_shared_tokens": 35760,
+        "previous_shared_share": 0.9968777876895629,
+        "session_seen_tokens": 35760,
+        "session_seen_share": 0.9968777876895629,
+        "warm_5m_shared_tokens": 35760,
+        "warm_15m_shared_tokens": 35760,
+        "same_model_provider_as_previous": true,
+        "n_messages": 60,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "terminal",
+        "tool_output_tokens": 16,
+        "provider_prompt": 37484,
+        "provider_cached": 37312,
+        "provider_completion": 44
+      }
+    },
+    {
+      "source_request": {
+        "step": 26,
+        "turn_index": 9,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779023753286,
+        "end_ms": 1779023760326,
+        "ttft_ms": 7038,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 37548,
+          "completion": 114,
+          "cached": 37440
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 91,
+          "assistant": 2141,
+          "tool": 23293,
+          "tool_definitions": 8638
+        },
+        "n_messages": 62,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*Interpreter",
+            "programs": [
+              "cd",
+              "set",
+              "source",
+              "set",
+              "python"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cd <path> && set -a && source <path> && set <str> && <assign> <assign> python <path> --hours <num> --<flag> <num> --<flag> <num> --<flag> <num>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ],
+              [
+                "background",
+                "<bool>"
+              ],
+              [
+                "notify_on_complete",
+                "<bool>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 40,
+            "latency_ms": 1541,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2246,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159209,
+            159210,
+            159211,
+            159212,
+            159213,
+            159214,
+            159215,
+            159216
+          ],
+          "sha256_of_compact_json": "ce7d5b77a52e7f2ad2a7c648cfe45eb3342531cf818f961c2f4de2dd3fc219f1"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 27,
+        "step": 26,
+        "turn_index": 9,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779023753286,
+        "end_ms": 1779023760326,
+        "gap_from_previous_completion_s": 2.897,
+        "input_o200k": 35938,
+        "encoded_tokens": 35936,
+        "delta_input": 56,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 91,
+        "role_assistant": 2141,
+        "role_tool": 23293,
+        "tool_input_share": 0.6481440258222494,
+        "previous_shared_tokens": 35872,
+        "previous_shared_share": 0.9982190560997328,
+        "session_seen_tokens": 35872,
+        "session_seen_share": 0.9982190560997328,
+        "warm_5m_shared_tokens": 35872,
+        "warm_15m_shared_tokens": 35872,
+        "same_model_provider_as_previous": true,
+        "n_messages": 62,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "terminal",
+        "tool_output_tokens": 40,
+        "provider_prompt": 37548,
+        "provider_cached": 37440,
+        "provider_completion": 114
+      }
+    },
+    {
+      "source_request": {
+        "step": 27,
+        "turn_index": 9,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779023761867,
+        "end_ms": 1779023765958,
+        "ttft_ms": 4091,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 37709,
+          "completion": 46,
+          "cached": 37504
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 91,
+          "assistant": 2245,
+          "tool": 23335,
+          "tool_definitions": 8638
+        },
+        "n_messages": 64,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*Wait/Poll",
+            "programs": [
+              "sleep",
+              "cat"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "sleep <num> && cat <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 193,
+            "latency_ms": 5195,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2255,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159218,
+            159219,
+            159220,
+            159221,
+            159222,
+            159223,
+            159224,
+            159225
+          ],
+          "sha256_of_compact_json": "eac64cb29a7c5e079d15827910143b9d1c2087fcabbf2dd43cd667b029c011f4"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 28,
+        "step": 27,
+        "turn_index": 9,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779023761867,
+        "end_ms": 1779023765958,
+        "gap_from_previous_completion_s": 1.541,
+        "input_o200k": 36084,
+        "encoded_tokens": 36080,
+        "delta_input": 146,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 91,
+        "role_assistant": 2245,
+        "role_tool": 23335,
+        "tool_input_share": 0.6466855115840816,
+        "previous_shared_tokens": 35936,
+        "previous_shared_share": 0.9960088691796009,
+        "session_seen_tokens": 35936,
+        "session_seen_share": 0.9960088691796009,
+        "warm_5m_shared_tokens": 35936,
+        "warm_15m_shared_tokens": 35936,
+        "same_model_provider_as_previous": true,
+        "n_messages": 64,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "terminal",
+        "tool_output_tokens": 193,
+        "provider_prompt": 37709,
+        "provider_cached": 37504,
+        "provider_completion": 46
+      }
+    },
+    {
+      "source_request": {
+        "step": 28,
+        "turn_index": 9,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779023771153,
+        "end_ms": 1779023776221,
+        "ttft_ms": 5061,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 37957,
+          "completion": 47,
+          "cached": 37696
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 91,
+          "assistant": 2285,
+          "tool": 23530,
+          "tool_definitions": 8638
+        },
+        "n_messages": 66,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 2269,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159232,
+            159233,
+            159234,
+            159235,
+            159236,
+            159237,
+            159238,
+            159239
+          ],
+          "sha256_of_compact_json": "4bbf00056e9e3c208167a6107da7368bfb8a7240c030d82c17fd05c49fd5e3b4"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 29,
+        "step": 28,
+        "turn_index": 9,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779023771153,
+        "end_ms": 1779023776221,
+        "gap_from_previous_completion_s": 5.195,
+        "input_o200k": 36319,
+        "encoded_tokens": 36304,
+        "delta_input": 235,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 91,
+        "role_assistant": 2285,
+        "role_tool": 23530,
+        "tool_input_share": 0.6478702607450646,
+        "previous_shared_tokens": 36080,
+        "previous_shared_share": 0.9938298810048479,
+        "session_seen_tokens": 36080,
+        "session_seen_share": 0.9938298810048479,
+        "warm_5m_shared_tokens": 36080,
+        "warm_15m_shared_tokens": 36080,
+        "same_model_provider_as_previous": true,
+        "n_messages": 66,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 37957,
+        "provider_cached": 37696,
+        "provider_completion": 47
+      }
+    },
+    {
+      "source_request": {
+        "step": 29,
+        "turn_index": 10,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779024727759,
+        "end_ms": 1779024736213,
+        "ttft_ms": 8453,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 37968,
+          "completion": 44,
+          "cached": 37312
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 98,
+          "assistant": 2332,
+          "tool": 23530,
+          "tool_definitions": 8638
+        },
+        "n_messages": 68,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "cat"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cat <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 193,
+            "latency_ms": 4512,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2273,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159236,
+            159237,
+            159238,
+            159239,
+            159240,
+            159241,
+            159242,
+            159243
+          ],
+          "sha256_of_compact_json": "ced4d872b7ae13b46f9c4ae2fc948cdc42c929be5382d582f96e3af5fa97cf41"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 30,
+        "step": 29,
+        "turn_index": 10,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779024727759,
+        "end_ms": 1779024736213,
+        "gap_from_previous_completion_s": 951.538,
+        "input_o200k": 36373,
+        "encoded_tokens": 36368,
+        "delta_input": 54,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 98,
+        "role_assistant": 2332,
+        "role_tool": 23530,
+        "tool_input_share": 0.6469084210815715,
+        "previous_shared_tokens": 36304,
+        "previous_shared_share": 0.998240211174659,
+        "session_seen_tokens": 36304,
+        "session_seen_share": 0.998240211174659,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": true,
+        "n_messages": 68,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 1,
+        "tool_names": "terminal",
+        "tool_output_tokens": 193,
+        "provider_prompt": 37968,
+        "provider_cached": 37312,
+        "provider_completion": 44
+      }
+    },
+    {
+      "source_request": {
+        "step": 30,
+        "turn_index": 10,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779024740725,
+        "end_ms": 1779024745706,
+        "ttft_ms": 4980,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 38214,
+          "completion": 33,
+          "cached": 37952
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 98,
+          "assistant": 2371,
+          "tool": 23725,
+          "tool_definitions": 8638
+        },
+        "n_messages": 70,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 2287,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159250,
+            159251,
+            159252,
+            159253,
+            159254,
+            159255,
+            159256,
+            159257
+          ],
+          "sha256_of_compact_json": "246b75d1d6f48a7290f347949a7db0bb1019739d285262140424abbba7221a21"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 31,
+        "step": 30,
+        "turn_index": 10,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779024740725,
+        "end_ms": 1779024745706,
+        "gap_from_previous_completion_s": 4.512,
+        "input_o200k": 36607,
+        "encoded_tokens": 36592,
+        "delta_input": 234,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 98,
+        "role_assistant": 2371,
+        "role_tool": 23725,
+        "tool_input_share": 0.6481000901466932,
+        "previous_shared_tokens": 36368,
+        "previous_shared_share": 0.9938784433756013,
+        "session_seen_tokens": 36368,
+        "session_seen_share": 0.9938784433756013,
+        "warm_5m_shared_tokens": 36368,
+        "warm_15m_shared_tokens": 36368,
+        "same_model_provider_as_previous": true,
+        "n_messages": 70,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 38214,
+        "provider_cached": 37952,
+        "provider_completion": 33
+      }
+    },
+    {
+      "source_request": {
+        "step": 31,
+        "turn_index": 11,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779024794877,
+        "end_ms": 1779024801772,
+        "ttft_ms": 6890,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 38259,
+          "completion": 145,
+          "cached": 37952
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 115,
+          "assistant": 2405,
+          "tool": 23725,
+          "tool_definitions": 8638
+        },
+        "n_messages": 72,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "process",
+            "category": "Other",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "action",
+                "<str>"
+              ],
+              [
+                "session_id",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 129,
+            "latency_ms": 7578,
+            "subagent": null
+          },
+          {
+            "call_index": 1,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "tail"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "tail -5 <path> 2> <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 4766,
+            "latency_ms": 7578,
+            "subagent": null
+          },
+          {
+            "call_index": 2,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "ls",
+              "head"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "ls -lt <path> | head -5"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 172,
+            "latency_ms": 7578,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2291,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159254,
+            159255,
+            159256,
+            159257,
+            159258,
+            159259,
+            159260,
+            159261
+          ],
+          "sha256_of_compact_json": "06994e1c089f69b5bd2301c27b900c1355cf8d95bf84bfed39571592f5e2ff39"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 32,
+        "step": 31,
+        "turn_index": 11,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779024794877,
+        "end_ms": 1779024801772,
+        "gap_from_previous_completion_s": 49.171,
+        "input_o200k": 36658,
+        "encoded_tokens": 36656,
+        "delta_input": 51,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 115,
+        "role_assistant": 2405,
+        "role_tool": 23725,
+        "tool_input_share": 0.6471984287195155,
+        "previous_shared_tokens": 36592,
+        "previous_shared_share": 0.998254037538193,
+        "session_seen_tokens": 36592,
+        "session_seen_share": 0.998254037538193,
+        "warm_5m_shared_tokens": 36592,
+        "warm_15m_shared_tokens": 36592,
+        "same_model_provider_as_previous": true,
+        "n_messages": 72,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 3,
+        "tool_names": "process; terminal; terminal",
+        "tool_output_tokens": 5067,
+        "provider_prompt": 38259,
+        "provider_cached": 37952,
+        "provider_completion": 145
+      }
+    },
+    {
+      "source_request": {
+        "step": 32,
+        "turn_index": 11,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779024809350,
+        "end_ms": 1779024821580,
+        "ttft_ms": 9158,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 43630,
+          "completion": 207,
+          "cached": 38208
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 115,
+          "assistant": 2531,
+          "tool": 28798,
+          "tool_definitions": 8638
+        },
+        "n_messages": 76,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 2616,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159579,
+            159580,
+            159581,
+            159582,
+            159583,
+            159584,
+            159585,
+            159586
+          ],
+          "sha256_of_compact_json": "451e40bf0eafdddf405ed9e541c03faec198824d4e8c315a29a2bcea51c7b711"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 33,
+        "step": 32,
+        "turn_index": 11,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779024809350,
+        "end_ms": 1779024821580,
+        "gap_from_previous_completion_s": 7.578,
+        "input_o200k": 41857,
+        "encoded_tokens": 41856,
+        "delta_input": 5199,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 115,
+        "role_assistant": 2531,
+        "role_tool": 28798,
+        "tool_input_share": 0.6880091740927443,
+        "previous_shared_tokens": 36656,
+        "previous_shared_share": 0.8757645259938838,
+        "session_seen_tokens": 36656,
+        "session_seen_share": 0.8757645259938838,
+        "warm_5m_shared_tokens": 36656,
+        "warm_15m_shared_tokens": 36656,
+        "same_model_provider_as_previous": true,
+        "n_messages": 76,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 43630,
+        "provider_cached": 38208,
+        "provider_completion": 207
+      }
+    },
+    {
+      "source_request": {
+        "step": 33,
+        "turn_index": 12,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779028653670,
+        "end_ms": 1779028661362,
+        "ttft_ms": 7692,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 43812,
+          "completion": 49,
+          "cached": 64
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 122,
+          "assistant": 2743,
+          "tool": 28798,
+          "tool_definitions": 8638
+        },
+        "n_messages": 78,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "cat"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cat <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 204,
+            "latency_ms": 5409,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2629,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159592,
+            159593,
+            159594,
+            159595,
+            159596,
+            159597,
+            159598,
+            159599
+          ],
+          "sha256_of_compact_json": "61ad7131ddf2ce045d08ba9760da66b1de8407f5293996213586df60f593da12"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 34,
+        "step": 33,
+        "turn_index": 12,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779028653670,
+        "end_ms": 1779028661362,
+        "gap_from_previous_completion_s": 3832.09,
+        "input_o200k": 42076,
+        "encoded_tokens": 42064,
+        "delta_input": 219,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 122,
+        "role_assistant": 2743,
+        "role_tool": 28798,
+        "tool_input_share": 0.6844281775834204,
+        "previous_shared_tokens": 41856,
+        "previous_shared_share": 0.99505515405097,
+        "session_seen_tokens": 41856,
+        "session_seen_share": 0.99505515405097,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": true,
+        "n_messages": 78,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 1,
+        "tool_names": "terminal",
+        "tool_output_tokens": 204,
+        "provider_prompt": 43812,
+        "provider_cached": 64,
+        "provider_completion": 49
+      }
+    },
+    {
+      "source_request": {
+        "step": 34,
+        "turn_index": 12,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779028666771,
+        "end_ms": 1779028676821,
+        "ttft_ms": 10039,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 44075,
+          "completion": 85,
+          "cached": 43776
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 122,
+          "assistant": 2786,
+          "tool": 29004,
+          "tool_definitions": 8638
+        },
+        "n_messages": 80,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 2645,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159608,
+            159609,
+            159610,
+            159611,
+            159612,
+            159613,
+            159614,
+            159615
+          ],
+          "sha256_of_compact_json": "cc5f3f41246b77282d2de1bef4f0deb7ecf1fded657b964828d89b2272ae28cb"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 35,
+        "step": 34,
+        "turn_index": 12,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779028666771,
+        "end_ms": 1779028676821,
+        "gap_from_previous_completion_s": 5.409,
+        "input_o200k": 42325,
+        "encoded_tokens": 42320,
+        "delta_input": 249,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 122,
+        "role_assistant": 2786,
+        "role_tool": 29004,
+        "tool_input_share": 0.6852687536916716,
+        "previous_shared_tokens": 42064,
+        "previous_shared_share": 0.9939508506616257,
+        "session_seen_tokens": 42064,
+        "session_seen_share": 0.9939508506616257,
+        "warm_5m_shared_tokens": 42064,
+        "warm_15m_shared_tokens": 42064,
+        "same_model_provider_as_previous": true,
+        "n_messages": 80,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 44075,
+        "provider_cached": 43776,
+        "provider_completion": 85
+      }
+    },
+    {
+      "source_request": {
+        "step": 35,
+        "turn_index": 13,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779035161240,
+        "end_ms": 1779035167055,
+        "ttft_ms": 5814,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 44158,
+          "completion": 42,
+          "cached": 9344
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 129,
+          "assistant": 2869,
+          "tool": 29004,
+          "tool_definitions": 8638
+        },
+        "n_messages": 82,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "cat"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cat <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 204,
+            "latency_ms": 8648,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2650,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159613,
+            159614,
+            159615,
+            159616,
+            159617,
+            159618,
+            159619,
+            159620
+          ],
+          "sha256_of_compact_json": "c3963e086f5b0ff51d8e59ae653a4988933fbeceff18aec2e566a135f7c3499f"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 36,
+        "step": 35,
+        "turn_index": 13,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779035161240,
+        "end_ms": 1779035167055,
+        "gap_from_previous_completion_s": 6484.419,
+        "input_o200k": 42415,
+        "encoded_tokens": 42400,
+        "delta_input": 90,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 129,
+        "role_assistant": 2869,
+        "role_tool": 29004,
+        "tool_input_share": 0.6838146881999293,
+        "previous_shared_tokens": 42320,
+        "previous_shared_share": 0.9981132075471698,
+        "session_seen_tokens": 42320,
+        "session_seen_share": 0.9981132075471698,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": true,
+        "n_messages": 82,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 1,
+        "tool_names": "terminal",
+        "tool_output_tokens": 204,
+        "provider_prompt": 44158,
+        "provider_cached": 9344,
+        "provider_completion": 42
+      }
+    },
+    {
+      "source_request": {
+        "step": 36,
+        "turn_index": 13,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779035175703,
+        "end_ms": 1779035183177,
+        "ttft_ms": 7472,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 44414,
+          "completion": 80,
+          "cached": 44096
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 129,
+          "assistant": 2905,
+          "tool": 29210,
+          "tool_definitions": 8638
+        },
+        "n_messages": 84,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 2666,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159629,
+            159630,
+            159631,
+            159632,
+            159633,
+            159634,
+            159635,
+            159636
+          ],
+          "sha256_of_compact_json": "d6c7299427d82d77049309713a4a661a1f511e4117ce58d40661d2a5835c1ec0"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 37,
+        "step": 36,
+        "turn_index": 13,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779035175703,
+        "end_ms": 1779035183177,
+        "gap_from_previous_completion_s": 8.648,
+        "input_o200k": 42657,
+        "encoded_tokens": 42656,
+        "delta_input": 242,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 129,
+        "role_assistant": 2905,
+        "role_tool": 29210,
+        "tool_input_share": 0.6847645169608739,
+        "previous_shared_tokens": 42400,
+        "previous_shared_share": 0.9939984996249063,
+        "session_seen_tokens": 42400,
+        "session_seen_share": 0.9939984996249063,
+        "warm_5m_shared_tokens": 42400,
+        "warm_15m_shared_tokens": 42400,
+        "same_model_provider_as_previous": true,
+        "n_messages": 84,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 44414,
+        "provider_cached": 44096,
+        "provider_completion": 80
+      }
+    },
+    {
+      "source_request": {
+        "step": 37,
+        "turn_index": 14,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779039272637,
+        "end_ms": 1779039278340,
+        "ttft_ms": 5701,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 44499,
+          "completion": 42,
+          "cached": 2816
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 136,
+          "assistant": 2985,
+          "tool": 29210,
+          "tool_definitions": 8638
+        },
+        "n_messages": 86,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "cat"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cat <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 204,
+            "latency_ms": 9665,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2671,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159634,
+            159635,
+            159636,
+            159637,
+            159638,
+            159639,
+            159640,
+            159641
+          ],
+          "sha256_of_compact_json": "eeef36227a73d56a118e2af6fa7e27ff81fb12b768bffed8e3c2ff7147f1d7ee"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 38,
+        "step": 37,
+        "turn_index": 14,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779039272637,
+        "end_ms": 1779039278340,
+        "gap_from_previous_completion_s": 4089.46,
+        "input_o200k": 42744,
+        "encoded_tokens": 42736,
+        "delta_input": 87,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 136,
+        "role_assistant": 2985,
+        "role_tool": 29210,
+        "tool_input_share": 0.6833707654875538,
+        "previous_shared_tokens": 42656,
+        "previous_shared_share": 0.9981280419318608,
+        "session_seen_tokens": 42656,
+        "session_seen_share": 0.9981280419318608,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": true,
+        "n_messages": 86,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 1,
+        "tool_names": "terminal",
+        "tool_output_tokens": 204,
+        "provider_prompt": 44499,
+        "provider_cached": 2816,
+        "provider_completion": 42
+      }
+    },
+    {
+      "source_request": {
+        "step": 38,
+        "turn_index": 14,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779039288005,
+        "end_ms": 1779039296909,
+        "ttft_ms": 8894,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 44755,
+          "completion": 72,
+          "cached": 44736
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 136,
+          "assistant": 3021,
+          "tool": 29416,
+          "tool_definitions": 8638
+        },
+        "n_messages": 88,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 2686,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159649,
+            159650,
+            159651,
+            159652,
+            159653,
+            159654,
+            159655,
+            159656
+          ],
+          "sha256_of_compact_json": "4257a9610707c2afe2ca0fbc83e4decc853e1d10f39784fc144b6cc3591e7885"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 39,
+        "step": 38,
+        "turn_index": 14,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779039288005,
+        "end_ms": 1779039296909,
+        "gap_from_previous_completion_s": 9.665,
+        "input_o200k": 42986,
+        "encoded_tokens": 42976,
+        "delta_input": 242,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 136,
+        "role_assistant": 3021,
+        "role_tool": 29416,
+        "tool_input_share": 0.684315823756572,
+        "previous_shared_tokens": 42736,
+        "previous_shared_share": 0.994415487714073,
+        "session_seen_tokens": 42736,
+        "session_seen_share": 0.994415487714073,
+        "warm_5m_shared_tokens": 42736,
+        "warm_15m_shared_tokens": 42736,
+        "same_model_provider_as_previous": true,
+        "n_messages": 88,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 44755,
+        "provider_cached": 44736,
+        "provider_completion": 72
+      }
+    },
+    {
+      "source_request": {
+        "step": 39,
+        "turn_index": 15,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779064588800,
+        "end_ms": 1779064595837,
+        "ttft_ms": 7036,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 44832,
+          "completion": 42,
+          "cached": 9344
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 143,
+          "assistant": 3092,
+          "tool": 29416,
+          "tool_definitions": 8638
+        },
+        "n_messages": 90,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "cat"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cat <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 232,
+            "latency_ms": 3389,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2691,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159654,
+            159655,
+            159656,
+            159657,
+            159658,
+            159659,
+            159660,
+            159661
+          ],
+          "sha256_of_compact_json": "68fb190af36abfc2f07ad7c89369a2ceabfae5bf5cf422189b92c430b7110859"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 40,
+        "step": 39,
+        "turn_index": 15,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779064588800,
+        "end_ms": 1779064595837,
+        "gap_from_previous_completion_s": 25291.891,
+        "input_o200k": 43064,
+        "encoded_tokens": 43056,
+        "delta_input": 78,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 143,
+        "role_assistant": 3092,
+        "role_tool": 29416,
+        "tool_input_share": 0.6830763514768716,
+        "previous_shared_tokens": 42976,
+        "previous_shared_share": 0.9981419546636938,
+        "session_seen_tokens": 42976,
+        "session_seen_share": 0.9981419546636938,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": true,
+        "n_messages": 90,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 1,
+        "tool_names": "terminal",
+        "tool_output_tokens": 232,
+        "provider_prompt": 44832,
+        "provider_cached": 9344,
+        "provider_completion": 42
+      }
+    },
+    {
+      "source_request": {
+        "step": 40,
+        "turn_index": 15,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779064599226,
+        "end_ms": 1779064605946,
+        "ttft_ms": 6122,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 45117,
+          "completion": 102,
+          "cached": 44800
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 143,
+          "assistant": 3128,
+          "tool": 29650,
+          "tool_definitions": 8638
+        },
+        "n_messages": 92,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 2708,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159671,
+            159672,
+            159673,
+            159674,
+            159675,
+            159676,
+            159677,
+            159678
+          ],
+          "sha256_of_compact_json": "81070d6f110216fb67e75db658b45a943e4eeba2726735264e382545870a254f"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 41,
+        "step": 40,
+        "turn_index": 15,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779064599226,
+        "end_ms": 1779064605946,
+        "gap_from_previous_completion_s": 3.389,
+        "input_o200k": 43334,
+        "encoded_tokens": 43328,
+        "delta_input": 270,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 143,
+        "role_assistant": 3128,
+        "role_tool": 29650,
+        "tool_input_share": 0.6842202427654959,
+        "previous_shared_tokens": 43056,
+        "previous_shared_share": 0.9937223042836041,
+        "session_seen_tokens": 43056,
+        "session_seen_share": 0.9937223042836041,
+        "warm_5m_shared_tokens": 43056,
+        "warm_15m_shared_tokens": 43056,
+        "same_model_provider_as_previous": true,
+        "n_messages": 92,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 45117,
+        "provider_cached": 44800,
+        "provider_completion": 102
+      }
+    },
+    {
+      "source_request": {
+        "step": 41,
+        "turn_index": 16,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779090840407,
+        "end_ms": 1779090850360,
+        "ttft_ms": 9947,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 45229,
+          "completion": 128,
+          "cached": 9792
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 159,
+          "assistant": 3233,
+          "tool": 29650,
+          "tool_definitions": 8638
+        },
+        "n_messages": 94,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*Search",
+            "programs": [
+              "find",
+              "head"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "find <path> -type <str> -name <path> | head -30"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 432,
+            "latency_ms": 12085,
+            "subagent": null
+          },
+          {
+            "call_index": 1,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "ls"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "ls -la <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 138,
+            "latency_ms": 12085,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2715,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159678,
+            159679,
+            159680,
+            159681,
+            159682,
+            159683,
+            159684,
+            159685
+          ],
+          "sha256_of_compact_json": "847dd47a9b9ed21f9e219b11c490d5d05db090bb199c63709ca4651b0fd7c474"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 42,
+        "step": 41,
+        "turn_index": 16,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779090840407,
+        "end_ms": 1779090850360,
+        "gap_from_previous_completion_s": 26234.461,
+        "input_o200k": 43455,
+        "encoded_tokens": 43440,
+        "delta_input": 121,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 159,
+        "role_assistant": 3233,
+        "role_tool": 29650,
+        "tool_input_share": 0.6823150385456219,
+        "previous_shared_tokens": 43328,
+        "previous_shared_share": 0.9974217311233886,
+        "session_seen_tokens": 43328,
+        "session_seen_share": 0.9974217311233886,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": true,
+        "n_messages": 94,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 2,
+        "tool_names": "terminal; terminal",
+        "tool_output_tokens": 570,
+        "provider_prompt": 45229,
+        "provider_cached": 9792,
+        "provider_completion": 128
+      }
+    },
+    {
+      "source_request": {
+        "step": 42,
+        "turn_index": 16,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779090862445,
+        "end_ms": 1779090874372,
+        "ttft_ms": 11926,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 45940,
+          "completion": 206,
+          "cached": 45184
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 159,
+          "assistant": 3348,
+          "tool": 30224,
+          "tool_definitions": 8638
+        },
+        "n_messages": 97,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "tool_calls",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "head"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "head -20 <path> <path> <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 528,
+            "latency_ms": 10060,
+            "subagent": null
+          },
+          {
+            "call_index": 1,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "head"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "head -40 <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 886,
+            "latency_ms": 10060,
+            "subagent": null
+          },
+          {
+            "call_index": 2,
+            "name": "terminal",
+            "category": "*File Ops",
+            "programs": [
+              "wc"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "wc -l <path>"
+              ],
+              [
+                "timeout",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 43,
+            "latency_ms": 10060,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2759,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159722,
+            159723,
+            159724,
+            159725,
+            159726,
+            159727,
+            159728,
+            159729
+          ],
+          "sha256_of_compact_json": "fb30cadcbee5b7c0d850b16e32f6497a4fadbb716324e56cda7b8df612aeaa2d"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 43,
+        "step": 42,
+        "turn_index": 16,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779090862445,
+        "end_ms": 1779090874372,
+        "gap_from_previous_completion_s": 12.085,
+        "input_o200k": 44144,
+        "encoded_tokens": 44144,
+        "delta_input": 689,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 159,
+        "role_assistant": 3348,
+        "role_tool": 30224,
+        "tool_input_share": 0.6846683581007611,
+        "previous_shared_tokens": 43440,
+        "previous_shared_share": 0.9840521928234868,
+        "session_seen_tokens": 43440,
+        "session_seen_share": 0.9840521928234868,
+        "warm_5m_shared_tokens": 43440,
+        "warm_15m_shared_tokens": 43440,
+        "same_model_provider_as_previous": true,
+        "n_messages": 97,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 3,
+        "tool_names": "terminal; terminal; terminal",
+        "tool_output_tokens": 1457,
+        "provider_prompt": 45940,
+        "provider_cached": 45184,
+        "provider_completion": 206
+      }
+    },
+    {
+      "source_request": {
+        "step": 43,
+        "turn_index": 16,
+        "step_trigger": "tool",
+        "link_reason": "tool_call_id",
+        "start_ms": 1779090884432,
+        "end_ms": 1779090907537,
+        "ttft_ms": 9362,
+        "model": "glm-5.1",
+        "provider": "B",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 47613,
+          "completion": 620,
+          "cached": 45888
+        },
+        "role_tokens": {
+          "system": 1775,
+          "user": 159,
+          "assistant": 3531,
+          "tool": 31687,
+          "tool_definitions": 8638
+        },
+        "n_messages": 101,
+        "tool_definition_names": [
+          "browser_back",
+          "browser_click",
+          "browser_console",
+          "browser_get_images",
+          "browser_navigate",
+          "browser_press",
+          "browser_scroll",
+          "browser_snapshot",
+          "browser_type",
+          "browser_vision",
+          "clarify",
+          "cronjob",
+          "delegate_task",
+          "execute_code",
+          "memory",
+          "patch",
+          "process",
+          "read_file",
+          "search_files",
+          "send_message",
+          "session_search",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "text_to_speech",
+          "todo",
+          "vision_analyze",
+          "write_file"
+        ],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 2861,
+          "first_8": [
+            1,
+            28137,
+            28138,
+            28139,
+            28140,
+            28141,
+            28142,
+            28143
+          ],
+          "last_8": [
+            159824,
+            159825,
+            159826,
+            159827,
+            159828,
+            159829,
+            159830,
+            159831
+          ],
+          "sha256_of_compact_json": "4456d246fe48ac497608d61561025270af47e34d1dffafe151d053f1edb80d96"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "38fd82c2b2f4693bcb97a6be528dccae",
+        "harness": "hermes",
+        "request_number": 44,
+        "step": 43,
+        "turn_index": 16,
+        "model": "glm-5.1",
+        "provider": "B",
+        "start_ms": 1779090884432,
+        "end_ms": 1779090907537,
+        "gap_from_previous_completion_s": 10.06,
+        "input_o200k": 45790,
+        "encoded_tokens": 45776,
+        "delta_input": 1646,
+        "role_tool_definitions": 8638,
+        "role_system": 1775,
+        "role_user": 159,
+        "role_assistant": 3531,
+        "role_tool": 31687,
+        "tool_input_share": 0.6920069884254204,
+        "previous_shared_tokens": 44144,
+        "previous_shared_share": 0.964348130024467,
+        "session_seen_tokens": 44144,
+        "session_seen_share": 0.964348130024467,
+        "warm_5m_shared_tokens": 44144,
+        "warm_15m_shared_tokens": 44144,
+        "same_model_provider_as_previous": true,
+        "n_messages": 101,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 47613,
+        "provider_cached": 45888,
+        "provider_completion": 620
+      }
+    }
+  ]
+}

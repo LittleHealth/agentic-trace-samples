@@ -1,0 +1,5451 @@
+{
+  "session_id": "26b3e835fc1dc0d41af636b34005c880",
+  "harness": "cline",
+  "note": "block_ids 的完整数组见 trace.json；其余来源字段和工具骨架保留。",
+  "requests": [
+    {
+      "source_request": {
+        "step": 0,
+        "turn_index": 0,
+        "step_trigger": "user",
+        "link_reason": null,
+        "start_ms": 1779052772541,
+        "end_ms": 1779052787201,
+        "ttft_ms": 1716,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 78211,
+          "completion": 381,
+          "cached": 76160
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 56212,
+          "assistant": 6226,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 66,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": null,
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "read_file",
+            "category": "Read",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 5490,
+            "latency_ms": 34752,
+            "subagent": null
+          },
+          {
+            "call_index": 1,
+            "name": "read_file",
+            "category": "Read",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 6941,
+            "latency_ms": 34752,
+            "subagent": null
+          },
+          {
+            "call_index": 2,
+            "name": "read_file",
+            "category": "Read",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 295,
+            "latency_ms": 34752,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 4587,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            85829,
+            85830,
+            85831,
+            85832,
+            85833,
+            85834,
+            85835,
+            85836
+          ],
+          "sha256_of_compact_json": "70a41b63a577b3ba2297a0d221556cc2bcf4cd69b70cb9e4b7d625a6c882c9b2"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 1,
+        "step": 0,
+        "turn_index": 0,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779052772541,
+        "end_ms": 1779052787201,
+        "gap_from_previous_completion_s": null,
+        "input_o200k": 73397,
+        "encoded_tokens": 73392,
+        "delta_input": null,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 56212,
+        "role_assistant": 6226,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 0,
+        "previous_shared_share": 0.0,
+        "session_seen_tokens": 0,
+        "session_seen_share": 0.0,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": null,
+        "n_messages": 66,
+        "transition": "initial",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 3,
+        "tool_names": "read_file; read_file; read_file",
+        "tool_output_tokens": 12726,
+        "provider_prompt": 78211,
+        "provider_cached": 76160,
+        "provider_completion": 381
+      }
+    },
+    {
+      "source_request": {
+        "step": 1,
+        "turn_index": 0,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779052821953,
+        "end_ms": 1779052851628,
+        "ttft_ms": 2803,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 92161,
+          "completion": 922,
+          "cached": 78208
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 69271,
+          "assistant": 6320,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 68,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "execute_command",
+            "category": "Other",
+            "programs": [
+              "kubectl get",
+              "echo",
+              "kubectl exec",
+              "echo",
+              "kubectl exec"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "kubectl get <str> -n <str> 2>&1 && echo <str> && kubectl exec -n <str> <path> -c <str> <str> <str> -s <path> 2>&1 && echo <str> && kubectl exec -n <str> <path> -c <str> <str> <str> -s <path> 2>&1"
+              ],
+              [
+                "requires_approval",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 159,
+            "latency_ms": 89589,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 5409,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            86651,
+            86652,
+            86653,
+            86654,
+            86655,
+            86656,
+            86657,
+            86658
+          ],
+          "sha256_of_compact_json": "a1daa7a7cea068677f6fb14aeacc4aae7712182035b7b78b0061196089f1f4a1"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 2,
+        "step": 1,
+        "turn_index": 0,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779052821953,
+        "end_ms": 1779052851628,
+        "gap_from_previous_completion_s": 34.752,
+        "input_o200k": 86550,
+        "encoded_tokens": 86544,
+        "delta_input": 13153,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 69271,
+        "role_assistant": 6320,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 73392,
+        "previous_shared_share": 0.8480310593455352,
+        "session_seen_tokens": 73392,
+        "session_seen_share": 0.8480310593455352,
+        "warm_5m_shared_tokens": 73392,
+        "warm_15m_shared_tokens": 73392,
+        "same_model_provider_as_previous": true,
+        "n_messages": 68,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "execute_command",
+        "tool_output_tokens": 159,
+        "provider_prompt": 92161,
+        "provider_cached": 78208,
+        "provider_completion": 922
+      }
+    },
+    {
+      "source_request": {
+        "step": 2,
+        "turn_index": 0,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779052941217,
+        "end_ms": 1779052959918,
+        "ttft_ms": 1470,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 92839,
+          "completion": 454,
+          "cached": 92160
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 69763,
+          "assistant": 6460,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 70,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "read_file",
+            "category": "Read",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 639,
+            "latency_ms": 47964,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 5448,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            86690,
+            86691,
+            86692,
+            86693,
+            86694,
+            86695,
+            86696,
+            86697
+          ],
+          "sha256_of_compact_json": "ea7c34c462112fbb497dd54132547964a1d7af18e4401e2ef383f9fe9893c386"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 3,
+        "step": 2,
+        "turn_index": 0,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779052941217,
+        "end_ms": 1779052959918,
+        "gap_from_previous_completion_s": 89.589,
+        "input_o200k": 87182,
+        "encoded_tokens": 87168,
+        "delta_input": 632,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 69763,
+        "role_assistant": 6460,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 86544,
+        "previous_shared_share": 0.9928414096916299,
+        "session_seen_tokens": 86544,
+        "session_seen_share": 0.9928414096916299,
+        "warm_5m_shared_tokens": 86544,
+        "warm_15m_shared_tokens": 86544,
+        "same_model_provider_as_previous": true,
+        "n_messages": 70,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "read_file",
+        "tool_output_tokens": 639,
+        "provider_prompt": 92839,
+        "provider_cached": 92160,
+        "provider_completion": 454
+      }
+    },
+    {
+      "source_request": {
+        "step": 3,
+        "turn_index": 0,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779053007882,
+        "end_ms": 1779053049867,
+        "ttft_ms": 1519,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 93973,
+          "completion": 1333,
+          "cached": 92800
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 70735,
+          "assistant": 6507,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 72,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "execute_command",
+            "category": "*Interpreter",
+            "programs": [
+              "echo",
+              "ls",
+              "echo",
+              "echo",
+              "cd",
+              "python -c"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "echo <str> && ls -la <path> 2>&1 && echo <str> && echo <str> && cd <path> && python -c <path> 2>&1"
+              ],
+              [
+                "requires_approval",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 384,
+            "latency_ms": 123082,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 5512,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            86754,
+            86755,
+            86756,
+            86757,
+            86758,
+            86759,
+            86760,
+            86761
+          ],
+          "sha256_of_compact_json": "f00e1e896508e8fec5a9b64e1f0fa3d49f59ee366e0f43719625efbaaa432ba3"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 4,
+        "step": 3,
+        "turn_index": 0,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779053007882,
+        "end_ms": 1779053049867,
+        "gap_from_previous_completion_s": 47.964,
+        "input_o200k": 88201,
+        "encoded_tokens": 88192,
+        "delta_input": 1019,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 70735,
+        "role_assistant": 6507,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 87168,
+        "previous_shared_share": 0.988388969521045,
+        "session_seen_tokens": 87168,
+        "session_seen_share": 0.988388969521045,
+        "warm_5m_shared_tokens": 87168,
+        "warm_15m_shared_tokens": 87168,
+        "same_model_provider_as_previous": true,
+        "n_messages": 72,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "execute_command",
+        "tool_output_tokens": 384,
+        "provider_prompt": 93973,
+        "provider_cached": 92800,
+        "provider_completion": 1333
+      }
+    },
+    {
+      "source_request": {
+        "step": 4,
+        "turn_index": 0,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779053172949,
+        "end_ms": 1779053187968,
+        "ttft_ms": 1560,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 95409,
+          "completion": 343,
+          "cached": 93952
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 71829,
+          "assistant": 6745,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 74,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "execute_command",
+            "category": "*File Ops",
+            "programs": [
+              "cat"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cat <path> 2>&1"
+              ],
+              [
+                "requires_approval",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 85,
+            "latency_ms": 31304,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 5595,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            86837,
+            86838,
+            86839,
+            86840,
+            86841,
+            86842,
+            86843,
+            86844
+          ],
+          "sha256_of_compact_json": "ba72e461bde88e62661091a6864d3e9fbcfa1a64b1a564e6547ae3af60bbe993"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 5,
+        "step": 4,
+        "turn_index": 0,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779053172949,
+        "end_ms": 1779053187968,
+        "gap_from_previous_completion_s": 123.082,
+        "input_o200k": 89533,
+        "encoded_tokens": 89520,
+        "delta_input": 1332,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 71829,
+        "role_assistant": 6745,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 88192,
+        "previous_shared_share": 0.9851653261840929,
+        "session_seen_tokens": 88192,
+        "session_seen_share": 0.9851653261840929,
+        "warm_5m_shared_tokens": 88192,
+        "warm_15m_shared_tokens": 88192,
+        "same_model_provider_as_previous": true,
+        "n_messages": 74,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "execute_command",
+        "tool_output_tokens": 85,
+        "provider_prompt": 95409,
+        "provider_cached": 93952,
+        "provider_completion": 343
+      }
+    },
+    {
+      "source_request": {
+        "step": 5,
+        "turn_index": 0,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779053219272,
+        "end_ms": 1779053230074,
+        "ttft_ms": 1591,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 95961,
+          "completion": 234,
+          "cached": 95360
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 72247,
+          "assistant": 6827,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 76,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "execute_command",
+            "category": "*Interpreter",
+            "programs": [
+              "cd",
+              "python <word>"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cd <path> && python -m <word> 2>&1"
+              ],
+              [
+                "requires_approval",
+                "<str>"
+              ],
+              [
+                "task_progress",
+                "<path>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 244,
+            "latency_ms": 11580,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 5627,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            86869,
+            86870,
+            86871,
+            86872,
+            86873,
+            86874,
+            86875,
+            86876
+          ],
+          "sha256_of_compact_json": "6d86987d888473631cc28a5c598404525fa8c263c4dd965a5639850d1c9528ec"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 6,
+        "step": 5,
+        "turn_index": 0,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779053219272,
+        "end_ms": 1779053230074,
+        "gap_from_previous_completion_s": 31.304,
+        "input_o200k": 90033,
+        "encoded_tokens": 90032,
+        "delta_input": 500,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 72247,
+        "role_assistant": 6827,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 89520,
+        "previous_shared_share": 0.9943131331082282,
+        "session_seen_tokens": 89520,
+        "session_seen_share": 0.9943131331082282,
+        "warm_5m_shared_tokens": 89520,
+        "warm_15m_shared_tokens": 89520,
+        "same_model_provider_as_previous": true,
+        "n_messages": 76,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "execute_command",
+        "tool_output_tokens": 244,
+        "provider_prompt": 95961,
+        "provider_cached": 95360,
+        "provider_completion": 234
+      }
+    },
+    {
+      "source_request": {
+        "step": 6,
+        "turn_index": 0,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779053241654,
+        "end_ms": 1779053255724,
+        "ttft_ms": 2273,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 97009,
+          "completion": 302,
+          "cached": 95872
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 73049,
+          "assistant": 6994,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 78,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "execute_command",
+            "category": "*Interpreter",
+            "programs": [
+              "cd",
+              "python -c"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cd <path> && python -c <path> 2>&1"
+              ],
+              [
+                "requires_approval",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 311,
+            "latency_ms": 7614,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 5687,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            86929,
+            86930,
+            86931,
+            86932,
+            86933,
+            86934,
+            86935,
+            86936
+          ],
+          "sha256_of_compact_json": "4c8350a2ce7e2fc8622a3963b6c7563acdaac8758ba24b3e1e104472915d25cf"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 7,
+        "step": 6,
+        "turn_index": 0,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779053241654,
+        "end_ms": 1779053255724,
+        "gap_from_previous_completion_s": 11.58,
+        "input_o200k": 91002,
+        "encoded_tokens": 90992,
+        "delta_input": 969,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 73049,
+        "role_assistant": 6994,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 90032,
+        "previous_shared_share": 0.9894496219447864,
+        "session_seen_tokens": 90032,
+        "session_seen_share": 0.9894496219447864,
+        "warm_5m_shared_tokens": 90032,
+        "warm_15m_shared_tokens": 90032,
+        "same_model_provider_as_previous": true,
+        "n_messages": 78,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "execute_command",
+        "tool_output_tokens": 311,
+        "provider_prompt": 97009,
+        "provider_cached": 95872,
+        "provider_completion": 302
+      }
+    },
+    {
+      "source_request": {
+        "step": 7,
+        "turn_index": 0,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779053263338,
+        "end_ms": 1779053326938,
+        "ttft_ms": 1473,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 98300,
+          "completion": 1585,
+          "cached": 96896
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 73985,
+          "assistant": 7238,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 80,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "execute_command",
+            "category": "*Interpreter",
+            "programs": [
+              "cd",
+              "python -c"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cd <path> && python -c <path> 2>&1"
+              ],
+              [
+                "requires_approval",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 240,
+            "latency_ms": 154124,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 5761,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            87003,
+            87004,
+            87005,
+            87006,
+            87007,
+            87008,
+            87009,
+            87010
+          ],
+          "sha256_of_compact_json": "e161da9dc3bb822e4b8dbc8653e22e02760951129d0be30fb1663f92e32ef6e5"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 8,
+        "step": 7,
+        "turn_index": 0,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779053263338,
+        "end_ms": 1779053326938,
+        "gap_from_previous_completion_s": 7.614,
+        "input_o200k": 92182,
+        "encoded_tokens": 92176,
+        "delta_input": 1180,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 73985,
+        "role_assistant": 7238,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 90992,
+        "previous_shared_share": 0.9871550078111438,
+        "session_seen_tokens": 90992,
+        "session_seen_share": 0.9871550078111438,
+        "warm_5m_shared_tokens": 90992,
+        "warm_15m_shared_tokens": 90992,
+        "same_model_provider_as_previous": true,
+        "n_messages": 80,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "execute_command",
+        "tool_output_tokens": 240,
+        "provider_prompt": 98300,
+        "provider_cached": 96896,
+        "provider_completion": 1585
+      }
+    },
+    {
+      "source_request": {
+        "step": 8,
+        "turn_index": 0,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779053481062,
+        "end_ms": 1779053507940,
+        "ttft_ms": 7402,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 68249,
+          "completion": 611,
+          "cached": 13440
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 49444,
+          "assistant": 3613,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 44,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "mutation",
+          "cause": "dropped_turns"
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "execute_command",
+            "category": "*Interpreter",
+            "programs": [
+              "cd",
+              "python -c"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cd <path> && python -c <path> 2>&1"
+              ],
+              [
+                "requires_approval",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 233,
+            "latency_ms": 49003,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 4001,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            90201,
+            90202,
+            90203,
+            90204,
+            90205,
+            90206,
+            90207,
+            90208
+          ],
+          "sha256_of_compact_json": "44a00bc3b6ce7c9978b9fd474af838da5a6fb26174e26f949174ab478c8a0770"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 9,
+        "step": 8,
+        "turn_index": 0,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779053481062,
+        "end_ms": 1779053507940,
+        "gap_from_previous_completion_s": 154.124,
+        "input_o200k": 64016,
+        "encoded_tokens": 64016,
+        "delta_input": -28166,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 49444,
+        "role_assistant": 3613,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 12848,
+        "previous_shared_share": 0.20069982504373907,
+        "session_seen_tokens": 12848,
+        "session_seen_share": 0.20069982504373907,
+        "warm_5m_shared_tokens": 12848,
+        "warm_15m_shared_tokens": 12848,
+        "same_model_provider_as_previous": true,
+        "n_messages": 44,
+        "transition": "mutation",
+        "cause": "dropped_turns",
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "execute_command",
+        "tool_output_tokens": 233,
+        "provider_prompt": 68249,
+        "provider_cached": 13440,
+        "provider_completion": 611
+      }
+    },
+    {
+      "source_request": {
+        "step": 9,
+        "turn_index": 0,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779053556943,
+        "end_ms": 1779053603680,
+        "ttft_ms": 1737,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 69296,
+          "completion": 1289,
+          "cached": 68224
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 50224,
+          "assistant": 3805,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 46,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "execute_command",
+            "category": "*Interpreter",
+            "programs": [
+              "cd",
+              "python -c"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cd <path> && python -c <path> 2>&1"
+              ],
+              [
+                "requires_approval",
+                "<str>"
+              ],
+              [
+                "task_progress",
+                "<path>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 763,
+            "latency_ms": 78636,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 4061,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            90261,
+            90262,
+            90263,
+            90264,
+            90265,
+            90266,
+            90267,
+            90268
+          ],
+          "sha256_of_compact_json": "edfa15c9275919ee896988900e4be9b200cef469cd419c47e8d089ba5d70f5c1"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 10,
+        "step": 9,
+        "turn_index": 0,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779053556943,
+        "end_ms": 1779053603680,
+        "gap_from_previous_completion_s": 49.003,
+        "input_o200k": 64988,
+        "encoded_tokens": 64976,
+        "delta_input": 972,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 50224,
+        "role_assistant": 3805,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 64016,
+        "previous_shared_share": 0.9852253139620784,
+        "session_seen_tokens": 64016,
+        "session_seen_share": 0.9852253139620784,
+        "warm_5m_shared_tokens": 64016,
+        "warm_15m_shared_tokens": 64016,
+        "same_model_provider_as_previous": true,
+        "n_messages": 46,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "execute_command",
+        "tool_output_tokens": 763,
+        "provider_prompt": 69296,
+        "provider_cached": 68224,
+        "provider_completion": 1289
+      }
+    },
+    {
+      "source_request": {
+        "step": 10,
+        "turn_index": 0,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779053682316,
+        "end_ms": 1779053722833,
+        "ttft_ms": 1461,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 71915,
+          "completion": 978,
+          "cached": 69248
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 52064,
+          "assistant": 4378,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 48,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "attempt_completion",
+            "category": "Ask User",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "result",
+                "<path>"
+              ],
+              [
+                "task_progress",
+                "<path>"
+              ]
+            ],
+            "outcome": "error",
+            "result_tokens": 279,
+            "latency_ms": 25271,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 4212,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            90412,
+            90413,
+            90414,
+            90415,
+            90416,
+            90417,
+            90418,
+            90419
+          ],
+          "sha256_of_compact_json": "8e5d449d2d1173f4830dd237caed5e451c8fdda830da425211ea9add70e3bca3"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 11,
+        "step": 10,
+        "turn_index": 0,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779053682316,
+        "end_ms": 1779053722833,
+        "gap_from_previous_completion_s": 78.636,
+        "input_o200k": 67401,
+        "encoded_tokens": 67392,
+        "delta_input": 2413,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 52064,
+        "role_assistant": 4378,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 64976,
+        "previous_shared_share": 0.9641500474833808,
+        "session_seen_tokens": 64976,
+        "session_seen_share": 0.9641500474833808,
+        "warm_5m_shared_tokens": 64976,
+        "warm_15m_shared_tokens": 64976,
+        "same_model_provider_as_previous": true,
+        "n_messages": 48,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "attempt_completion",
+        "tool_output_tokens": 279,
+        "provider_prompt": 71915,
+        "provider_cached": 69248,
+        "provider_completion": 978
+      }
+    },
+    {
+      "source_request": {
+        "step": 11,
+        "turn_index": 0,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779053748104,
+        "end_ms": 1779053789212,
+        "ttft_ms": 1675,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 73350,
+          "completion": 978,
+          "cached": 71808
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 52676,
+          "assistant": 5118,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 50,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "execute_command",
+            "category": "*Interpreter",
+            "programs": [
+              "cd",
+              "python -c"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cd <path> && python -c <path> 2>&1"
+              ],
+              [
+                "requires_approval",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 396,
+            "latency_ms": 71655,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 4297,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            90497,
+            90498,
+            90499,
+            90500,
+            90501,
+            90502,
+            90503,
+            90504
+          ],
+          "sha256_of_compact_json": "213139e4842c22ab8812965ceec5872967b552936aafbee0c0abf30a2845e621"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 12,
+        "step": 11,
+        "turn_index": 0,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779053748104,
+        "end_ms": 1779053789212,
+        "gap_from_previous_completion_s": 25.271,
+        "input_o200k": 68753,
+        "encoded_tokens": 68752,
+        "delta_input": 1352,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 52676,
+        "role_assistant": 5118,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 67392,
+        "previous_shared_share": 0.9802187572725157,
+        "session_seen_tokens": 67392,
+        "session_seen_share": 0.9802187572725157,
+        "warm_5m_shared_tokens": 67392,
+        "warm_15m_shared_tokens": 67392,
+        "same_model_provider_as_previous": true,
+        "n_messages": 50,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "execute_command",
+        "tool_output_tokens": 396,
+        "provider_prompt": 73350,
+        "provider_cached": 71808,
+        "provider_completion": 978
+      }
+    },
+    {
+      "source_request": {
+        "step": 12,
+        "turn_index": 0,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779053860867,
+        "end_ms": 1779053890509,
+        "ttft_ms": 1611,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 74910,
+          "completion": 701,
+          "cached": 73344
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 53783,
+          "assistant": 5469,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 52,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "execute_command",
+            "category": "*Interpreter",
+            "programs": [
+              "cd",
+              "python -c",
+              "head"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cd <path> && python -c <path> 2>&1 | head -80"
+              ],
+              [
+                "requires_approval",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 337,
+            "latency_ms": 51654,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 4388,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            90588,
+            90589,
+            90590,
+            90591,
+            90592,
+            90593,
+            90594,
+            90595
+          ],
+          "sha256_of_compact_json": "22524ff007ee696bcf5dbd522af678ddde57633237d82d6adc24ad4a0c92ff65"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 13,
+        "step": 12,
+        "turn_index": 0,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779053860867,
+        "end_ms": 1779053890509,
+        "gap_from_previous_completion_s": 71.655,
+        "input_o200k": 70211,
+        "encoded_tokens": 70208,
+        "delta_input": 1458,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 53783,
+        "role_assistant": 5469,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 68752,
+        "previous_shared_share": 0.9792616226071102,
+        "session_seen_tokens": 68752,
+        "session_seen_share": 0.9792616226071102,
+        "warm_5m_shared_tokens": 68752,
+        "warm_15m_shared_tokens": 68752,
+        "same_model_provider_as_previous": true,
+        "n_messages": 52,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "execute_command",
+        "tool_output_tokens": 337,
+        "provider_prompt": 74910,
+        "provider_cached": 73344,
+        "provider_completion": 701
+      }
+    },
+    {
+      "source_request": {
+        "step": 13,
+        "turn_index": 0,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779053942163,
+        "end_ms": 1779053950136,
+        "ttft_ms": 2043,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 76285,
+          "completion": 189,
+          "cached": 74880
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 54771,
+          "assistant": 5748,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 54,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "read_file",
+            "category": "Read",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ],
+              [
+                "start_line",
+                "<num>"
+              ],
+              [
+                "end_line",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 168,
+            "latency_ms": 12982,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 4467,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            90667,
+            90668,
+            90669,
+            90670,
+            90671,
+            90672,
+            90673,
+            90674
+          ],
+          "sha256_of_compact_json": "341215e532168e80401d6b280ab232ad0825caac86c7bc7fed9584186e6c5e69"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 14,
+        "step": 13,
+        "turn_index": 0,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779053942163,
+        "end_ms": 1779053950136,
+        "gap_from_previous_completion_s": 51.654,
+        "input_o200k": 71478,
+        "encoded_tokens": 71472,
+        "delta_input": 1267,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 54771,
+        "role_assistant": 5748,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 70208,
+        "previous_shared_share": 0.9823147526304007,
+        "session_seen_tokens": 70208,
+        "session_seen_share": 0.9823147526304007,
+        "warm_5m_shared_tokens": 70208,
+        "warm_15m_shared_tokens": 70208,
+        "same_model_provider_as_previous": true,
+        "n_messages": 54,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "read_file",
+        "tool_output_tokens": 168,
+        "provider_prompt": 76285,
+        "provider_cached": 74880,
+        "provider_completion": 189
+      }
+    },
+    {
+      "source_request": {
+        "step": 14,
+        "turn_index": 0,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779053963118,
+        "end_ms": 1779053971150,
+        "ttft_ms": 1775,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 76937,
+          "completion": 162,
+          "cached": 76160
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 55272,
+          "assistant": 5846,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 56,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "replace_in_file",
+            "category": "Other",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ],
+              [
+                "diff",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 5508,
+            "latency_ms": 29155,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 4504,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            90704,
+            90705,
+            90706,
+            90707,
+            90708,
+            90709,
+            90710,
+            90711
+          ],
+          "sha256_of_compact_json": "ef46971d7b9a8813e71d5718b23eca49345449f3e25398aafee446d0427d653c"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 15,
+        "step": 14,
+        "turn_index": 0,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779053963118,
+        "end_ms": 1779053971150,
+        "gap_from_previous_completion_s": 12.982,
+        "input_o200k": 72077,
+        "encoded_tokens": 72064,
+        "delta_input": 599,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 55272,
+        "role_assistant": 5846,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 71472,
+        "previous_shared_share": 0.991785079928952,
+        "session_seen_tokens": 71472,
+        "session_seen_share": 0.991785079928952,
+        "warm_5m_shared_tokens": 71472,
+        "warm_15m_shared_tokens": 71472,
+        "same_model_provider_as_previous": true,
+        "n_messages": 56,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "replace_in_file",
+        "tool_output_tokens": 5508,
+        "provider_prompt": 76937,
+        "provider_cached": 76160,
+        "provider_completion": 162
+      }
+    },
+    {
+      "source_request": {
+        "step": 15,
+        "turn_index": 0,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779054000305,
+        "end_ms": 1779054033682,
+        "ttft_ms": 2590,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 83319,
+          "completion": 1009,
+          "cached": 76928
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 61116,
+          "assistant": 5925,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 58,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 4875,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            91075,
+            91076,
+            91077,
+            91078,
+            91079,
+            91080,
+            91081,
+            91082
+          ],
+          "sha256_of_compact_json": "7f4038079103671a16890f0a95a33a867d5cfb990fb9857613f1ebf7dd7b0ab8"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 16,
+        "step": 15,
+        "turn_index": 0,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779054000305,
+        "end_ms": 1779054033682,
+        "gap_from_previous_completion_s": 29.155,
+        "input_o200k": 78000,
+        "encoded_tokens": 78000,
+        "delta_input": 5923,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 61116,
+        "role_assistant": 5925,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 72064,
+        "previous_shared_share": 0.9238974358974359,
+        "session_seen_tokens": 72064,
+        "session_seen_share": 0.9238974358974359,
+        "warm_5m_shared_tokens": 72064,
+        "warm_15m_shared_tokens": 72064,
+        "same_model_provider_as_previous": true,
+        "n_messages": 58,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 83319,
+        "provider_cached": 76928,
+        "provider_completion": 1009
+      }
+    },
+    {
+      "source_request": {
+        "step": 16,
+        "turn_index": 1,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779055327753,
+        "end_ms": 1779055335913,
+        "ttft_ms": 1644,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 85785,
+          "completion": 225,
+          "cached": 83200
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 63098,
+          "assistant": 6203,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 60,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "execute_command",
+            "category": "Other",
+            "programs": [
+              "ls",
+              "echo",
+              "cat",
+              "echo",
+              "docker images",
+              "head"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "ls -la <path> 2>&1 && echo <str> && cat <path> 2>&1 && echo <str> && docker images 2>&1 | head -20"
+              ],
+              [
+                "requires_approval",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 601,
+            "latency_ms": 15544,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 5016,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            91216,
+            91217,
+            91218,
+            91219,
+            91220,
+            91221,
+            91222,
+            91223
+          ],
+          "sha256_of_compact_json": "6916dee7fd01ce5944baaf0d7e21821220d56f553ca88ea59470b8f10c21a1b6"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 17,
+        "step": 16,
+        "turn_index": 1,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779055327753,
+        "end_ms": 1779055335913,
+        "gap_from_previous_completion_s": 1294.071,
+        "input_o200k": 80260,
+        "encoded_tokens": 80256,
+        "delta_input": 2260,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 63098,
+        "role_assistant": 6203,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 78000,
+        "previous_shared_share": 0.97188995215311,
+        "session_seen_tokens": 78000,
+        "session_seen_share": 0.97188995215311,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": true,
+        "n_messages": 60,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 1,
+        "tool_names": "execute_command",
+        "tool_output_tokens": 601,
+        "provider_prompt": 85785,
+        "provider_cached": 83200,
+        "provider_completion": 225
+      }
+    },
+    {
+      "source_request": {
+        "step": 17,
+        "turn_index": 1,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779055351457,
+        "end_ms": 1779055360664,
+        "ttft_ms": 1596,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 87502,
+          "completion": 261,
+          "cached": 85760
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 64631,
+          "assistant": 6311,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 62,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "execute_command",
+            "category": "Other",
+            "programs": [
+              "kubectl get",
+              "echo",
+              "ls",
+              "echo",
+              "docker images",
+              "grep"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "kubectl get <str> -n <str> 2>&1 && echo <str> && ls -la <path> 2>&1 && echo <str> && docker images --format <str> 2>&1 | grep -E <str>"
+              ],
+              [
+                "requires_approval",
+                "<str>"
+              ]
+            ],
+            "outcome": "error",
+            "result_tokens": 172,
+            "latency_ms": 15042,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 5118,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            91318,
+            91319,
+            91320,
+            91321,
+            91322,
+            91323,
+            91324,
+            91325
+          ],
+          "sha256_of_compact_json": "6870764ef49b909ca6015982a878f58c939afc663465c237f075c890c9f2b2ac"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 18,
+        "step": 17,
+        "turn_index": 1,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779055351457,
+        "end_ms": 1779055360664,
+        "gap_from_previous_completion_s": 15.544,
+        "input_o200k": 81901,
+        "encoded_tokens": 81888,
+        "delta_input": 1641,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 64631,
+        "role_assistant": 6311,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 80256,
+        "previous_shared_share": 0.9800703399765534,
+        "session_seen_tokens": 80256,
+        "session_seen_share": 0.9800703399765534,
+        "warm_5m_shared_tokens": 80256,
+        "warm_15m_shared_tokens": 80256,
+        "same_model_provider_as_previous": true,
+        "n_messages": 62,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "execute_command",
+        "tool_output_tokens": 172,
+        "provider_prompt": 87502,
+        "provider_cached": 85760,
+        "provider_completion": 261
+      }
+    },
+    {
+      "source_request": {
+        "step": 18,
+        "turn_index": 1,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779055375706,
+        "end_ms": 1779055413317,
+        "ttft_ms": 1829,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 88387,
+          "completion": 1098,
+          "cached": 87424
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 65306,
+          "assistant": 6460,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 64,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 5170,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            91370,
+            91371,
+            91372,
+            91373,
+            91374,
+            91375,
+            91376,
+            91377
+          ],
+          "sha256_of_compact_json": "d4065525ed514343e8cd690792de3a8640b4b21bebbb1e11095eab49de0117ce"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 19,
+        "step": 18,
+        "turn_index": 1,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779055375706,
+        "end_ms": 1779055413317,
+        "gap_from_previous_completion_s": 15.042,
+        "input_o200k": 82725,
+        "encoded_tokens": 82720,
+        "delta_input": 824,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 65306,
+        "role_assistant": 6460,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 81888,
+        "previous_shared_share": 0.9899419729206963,
+        "session_seen_tokens": 81888,
+        "session_seen_share": 0.9899419729206963,
+        "warm_5m_shared_tokens": 81888,
+        "warm_15m_shared_tokens": 81888,
+        "same_model_provider_as_previous": true,
+        "n_messages": 64,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 88387,
+        "provider_cached": 87424,
+        "provider_completion": 1098
+      }
+    },
+    {
+      "source_request": {
+        "step": 19,
+        "turn_index": 2,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779056719046,
+        "end_ms": 1779056748107,
+        "ttft_ms": 2240,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 94736,
+          "completion": 700,
+          "cached": 88320
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 70635,
+          "assistant": 7196,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 66,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "replace_in_file",
+            "category": "Other",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ],
+              [
+                "diff",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 5524,
+            "latency_ms": 5833812,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 5549,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            91749,
+            91750,
+            91751,
+            91752,
+            91753,
+            91754,
+            91755,
+            91756
+          ],
+          "sha256_of_compact_json": "5d49eef3953082f6104f03e67519c95011d572f35a0928eb7b3d871db2cc4e8b"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 20,
+        "step": 19,
+        "turn_index": 2,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779056719046,
+        "end_ms": 1779056748107,
+        "gap_from_previous_completion_s": 1305.729,
+        "input_o200k": 88790,
+        "encoded_tokens": 88784,
+        "delta_input": 6065,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 70635,
+        "role_assistant": 7196,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 82720,
+        "previous_shared_share": 0.9316994052982519,
+        "session_seen_tokens": 82720,
+        "session_seen_share": 0.9316994052982519,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": true,
+        "n_messages": 66,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 1,
+        "tool_names": "replace_in_file",
+        "tool_output_tokens": 5524,
+        "provider_prompt": 94736,
+        "provider_cached": 88320,
+        "provider_completion": 700
+      }
+    },
+    {
+      "source_request": {
+        "step": 20,
+        "turn_index": 2,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779062581919,
+        "end_ms": 1779062598241,
+        "ttft_ms": 4747,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 101427,
+          "completion": 364,
+          "cached": 94720
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 76495,
+          "assistant": 7530,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 68,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "execute_command",
+            "category": "*Interpreter",
+            "programs": [
+              "kubectl get",
+              "echo",
+              "docker images",
+              "grep",
+              "echo",
+              "docker images",
+              "grep",
+              "head",
+              "echo",
+              "ls",
+              "echo",
+              "cat",
+              "python -c"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "kubectl get <str> -n <str> 2>&1 && echo <str> && docker images --format <str> 2>&1 | grep -c <str> && echo <str> && docker images --format <path> 2>&1 | grep -E <str> | head -10 && echo <str> && ls <path> 2>&1 && echo <str> && cat <path> 2>&1 | python -c <path>"
+              ],
+              [
+                "requires_approval",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 354,
+            "latency_ms": 18420,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 5936,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            92136,
+            92137,
+            92138,
+            92139,
+            92140,
+            92141,
+            92142,
+            92143
+          ],
+          "sha256_of_compact_json": "fc36fe8e0c70881a34c0fb4e7d5a2f4e2dafc65a0343670d4d1380882ec8a5bc"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 21,
+        "step": 20,
+        "turn_index": 2,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779062581919,
+        "end_ms": 1779062598241,
+        "gap_from_previous_completion_s": 5833.812,
+        "input_o200k": 94984,
+        "encoded_tokens": 94976,
+        "delta_input": 6194,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 76495,
+        "role_assistant": 7530,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 88784,
+        "previous_shared_share": 0.9348045822102425,
+        "session_seen_tokens": 88784,
+        "session_seen_share": 0.9348045822102425,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": true,
+        "n_messages": 68,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "execute_command",
+        "tool_output_tokens": 354,
+        "provider_prompt": 101427,
+        "provider_cached": 94720,
+        "provider_completion": 364
+      }
+    },
+    {
+      "source_request": {
+        "step": 21,
+        "turn_index": 2,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779062616661,
+        "end_ms": 1779062651344,
+        "ttft_ms": 4758,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 47325,
+          "completion": 922,
+          "cached": 13440
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 28557,
+          "assistant": 4869,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 38,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "mutation",
+          "cause": "dropped_turns"
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "execute_command",
+            "category": "*Interpreter",
+            "programs": [
+              "cd",
+              "python -c"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cd <path> && python -c <path> 2>&1"
+              ],
+              [
+                "requires_approval",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 625,
+            "latency_ms": 35662,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 2774,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            94107,
+            94108,
+            94109,
+            94110,
+            94111,
+            94112,
+            94113,
+            94114
+          ],
+          "sha256_of_compact_json": "8b0fb055e749857c529976dd99787171569636466ff684dc8b7068198bf7c3ca"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 22,
+        "step": 21,
+        "turn_index": 2,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779062616661,
+        "end_ms": 1779062651344,
+        "gap_from_previous_completion_s": 18.42,
+        "input_o200k": 44385,
+        "encoded_tokens": 44384,
+        "delta_input": -50599,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 28557,
+        "role_assistant": 4869,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 12848,
+        "previous_shared_share": 0.2894736842105263,
+        "session_seen_tokens": 12848,
+        "session_seen_share": 0.2894736842105263,
+        "warm_5m_shared_tokens": 12848,
+        "warm_15m_shared_tokens": 12848,
+        "same_model_provider_as_previous": true,
+        "n_messages": 38,
+        "transition": "mutation",
+        "cause": "dropped_turns",
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "execute_command",
+        "tool_output_tokens": 625,
+        "provider_prompt": 47325,
+        "provider_cached": 13440,
+        "provider_completion": 922
+      }
+    },
+    {
+      "source_request": {
+        "step": 22,
+        "turn_index": 2,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779062687006,
+        "end_ms": 1779062724842,
+        "ttft_ms": 2110,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 49671,
+          "completion": 1139,
+          "cached": 47232
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 30124,
+          "assistant": 5453,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 40,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 2908,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            94241,
+            94242,
+            94243,
+            94244,
+            94245,
+            94246,
+            94247,
+            94248
+          ],
+          "sha256_of_compact_json": "73af1c69d4d8a157120ff6babf2681f52e4b9590bde69f52509af858241063d6"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 23,
+        "step": 22,
+        "turn_index": 2,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779062687006,
+        "end_ms": 1779062724842,
+        "gap_from_previous_completion_s": 35.662,
+        "input_o200k": 46536,
+        "encoded_tokens": 46528,
+        "delta_input": 2151,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 30124,
+        "role_assistant": 5453,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 44384,
+        "previous_shared_share": 0.953920220082531,
+        "session_seen_tokens": 44384,
+        "session_seen_share": 0.953920220082531,
+        "warm_5m_shared_tokens": 44384,
+        "warm_15m_shared_tokens": 44384,
+        "same_model_provider_as_previous": true,
+        "n_messages": 40,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 49671,
+        "provider_cached": 47232,
+        "provider_completion": 1139
+      }
+    },
+    {
+      "source_request": {
+        "step": 23,
+        "turn_index": 3,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779062741989,
+        "end_ms": 1779062748841,
+        "ttft_ms": 1780,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 53182,
+          "completion": 158,
+          "cached": 49664
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 32386,
+          "assistant": 6383,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 42,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "execute_command",
+            "category": "*Search",
+            "programs": [
+              "cd",
+              "grep"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cd <path> && grep -n <path> <path> 2>&1"
+              ],
+              [
+                "requires_approval",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 155,
+            "latency_ms": 9384,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 3108,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            94441,
+            94442,
+            94443,
+            94444,
+            94445,
+            94446,
+            94447,
+            94448
+          ],
+          "sha256_of_compact_json": "972b6bfb4d57b95fb643be72cf75f297a719a804d11f65c008ee7cb2d43fdaaf"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 24,
+        "step": 23,
+        "turn_index": 3,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779062741989,
+        "end_ms": 1779062748841,
+        "gap_from_previous_completion_s": 17.147,
+        "input_o200k": 49728,
+        "encoded_tokens": 49728,
+        "delta_input": 3192,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 32386,
+        "role_assistant": 6383,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 46528,
+        "previous_shared_share": 0.9356499356499357,
+        "session_seen_tokens": 46528,
+        "session_seen_share": 0.9356499356499357,
+        "warm_5m_shared_tokens": 46528,
+        "warm_15m_shared_tokens": 46528,
+        "same_model_provider_as_previous": true,
+        "n_messages": 42,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 1,
+        "tool_names": "execute_command",
+        "tool_output_tokens": 155,
+        "provider_prompt": 53182,
+        "provider_cached": 49664,
+        "provider_completion": 158
+      }
+    },
+    {
+      "source_request": {
+        "step": 24,
+        "turn_index": 3,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779062758225,
+        "end_ms": 1779062764292,
+        "ttft_ms": 1707,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 53973,
+          "completion": 135,
+          "cached": 53120
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 33011,
+          "assistant": 6480,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 44,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "read_file",
+            "category": "Read",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ],
+              [
+                "start_line",
+                "<num>"
+              ],
+              [
+                "end_line",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 616,
+            "latency_ms": 11420,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 3153,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            94486,
+            94487,
+            94488,
+            94489,
+            94490,
+            94491,
+            94492,
+            94493
+          ],
+          "sha256_of_compact_json": "f97c9008ccfb440f0cdf343de6f5249911e561b3d00c5cdb970a82d428da2406"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 25,
+        "step": 24,
+        "turn_index": 3,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779062758225,
+        "end_ms": 1779062764292,
+        "gap_from_previous_completion_s": 9.384,
+        "input_o200k": 50450,
+        "encoded_tokens": 50448,
+        "delta_input": 722,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 33011,
+        "role_assistant": 6480,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 49728,
+        "previous_shared_share": 0.9857278782112274,
+        "session_seen_tokens": 49728,
+        "session_seen_share": 0.9857278782112274,
+        "warm_5m_shared_tokens": 49728,
+        "warm_15m_shared_tokens": 49728,
+        "same_model_provider_as_previous": true,
+        "n_messages": 44,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "read_file",
+        "tool_output_tokens": 616,
+        "provider_prompt": 53973,
+        "provider_cached": 53120,
+        "provider_completion": 135
+      }
+    },
+    {
+      "source_request": {
+        "step": 25,
+        "turn_index": 3,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779062775712,
+        "end_ms": 1779062781978,
+        "ttft_ms": 2596,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 55077,
+          "completion": 108,
+          "cached": 53888
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 33963,
+          "assistant": 6539,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 46,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "read_file",
+            "category": "Read",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ],
+              [
+                "start_line",
+                "<num>"
+              ],
+              [
+                "end_line",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 1549,
+            "latency_ms": 10177,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 3216,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            94549,
+            94550,
+            94551,
+            94552,
+            94553,
+            94554,
+            94555,
+            94556
+          ],
+          "sha256_of_compact_json": "3fc26e5d08b35aebf17748bf3b2d8b61b69e96d604d63b54119df276778821e2"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 26,
+        "step": 25,
+        "turn_index": 3,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779062775712,
+        "end_ms": 1779062781978,
+        "gap_from_previous_completion_s": 11.42,
+        "input_o200k": 51461,
+        "encoded_tokens": 51456,
+        "delta_input": 1011,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 33963,
+        "role_assistant": 6539,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 50448,
+        "previous_shared_share": 0.980410447761194,
+        "session_seen_tokens": 50448,
+        "session_seen_share": 0.980410447761194,
+        "warm_5m_shared_tokens": 50448,
+        "warm_15m_shared_tokens": 50448,
+        "same_model_provider_as_previous": true,
+        "n_messages": 46,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "read_file",
+        "tool_output_tokens": 1549,
+        "provider_prompt": 55077,
+        "provider_cached": 53888,
+        "provider_completion": 108
+      }
+    },
+    {
+      "source_request": {
+        "step": 26,
+        "turn_index": 3,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779062792155,
+        "end_ms": 1779062819712,
+        "ttft_ms": 2485,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 57436,
+          "completion": 734,
+          "cached": 55040
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 36112,
+          "assistant": 6582,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 48,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "execute_command",
+            "category": "*Interpreter",
+            "programs": [
+              "cd",
+              "python -c"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cd <path> && python -c <path> 2>&1"
+              ],
+              [
+                "requires_approval",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 689,
+            "latency_ms": 29957,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 3353,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            94686,
+            94687,
+            94688,
+            94689,
+            94690,
+            94691,
+            94692,
+            94693
+          ],
+          "sha256_of_compact_json": "74c4a05de8d76573880d669be3be1ffc0b0b838a1640ee94f5a8ae034c9a3479"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 27,
+        "step": 26,
+        "turn_index": 3,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779062792155,
+        "end_ms": 1779062819712,
+        "gap_from_previous_completion_s": 10.177,
+        "input_o200k": 53653,
+        "encoded_tokens": 53648,
+        "delta_input": 2192,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 36112,
+        "role_assistant": 6582,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 51456,
+        "previous_shared_share": 0.9591410677005666,
+        "session_seen_tokens": 51456,
+        "session_seen_share": 0.9591410677005666,
+        "warm_5m_shared_tokens": 51456,
+        "warm_15m_shared_tokens": 51456,
+        "same_model_provider_as_previous": true,
+        "n_messages": 48,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "execute_command",
+        "tool_output_tokens": 689,
+        "provider_prompt": 57436,
+        "provider_cached": 55040,
+        "provider_completion": 734
+      }
+    },
+    {
+      "source_request": {
+        "step": 27,
+        "turn_index": 3,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779062849669,
+        "end_ms": 1779062878848,
+        "ttft_ms": 2389,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 59785,
+          "completion": 823,
+          "cached": 57344
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 37807,
+          "assistant": 7045,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 50,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "attempt_completion",
+            "category": "Ask User",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "result",
+                "<path>"
+              ]
+            ],
+            "outcome": "error",
+            "result_tokens": 279,
+            "latency_ms": 25427,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 3488,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            94821,
+            94822,
+            94823,
+            94824,
+            94825,
+            94826,
+            94827,
+            94828
+          ],
+          "sha256_of_compact_json": "aaefceefb462a91042a08affb318bc3b0ce3ed120e4b09733957cca8477f37e9"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 28,
+        "step": 27,
+        "turn_index": 3,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779062849669,
+        "end_ms": 1779062878848,
+        "gap_from_previous_completion_s": 29.957,
+        "input_o200k": 55811,
+        "encoded_tokens": 55808,
+        "delta_input": 2158,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 37807,
+        "role_assistant": 7045,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 53648,
+        "previous_shared_share": 0.961295871559633,
+        "session_seen_tokens": 53648,
+        "session_seen_share": 0.961295871559633,
+        "warm_5m_shared_tokens": 53648,
+        "warm_15m_shared_tokens": 53648,
+        "same_model_provider_as_previous": true,
+        "n_messages": 50,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "attempt_completion",
+        "tool_output_tokens": 279,
+        "provider_prompt": 59785,
+        "provider_cached": 57344,
+        "provider_completion": 823
+      }
+    },
+    {
+      "source_request": {
+        "step": 28,
+        "turn_index": 3,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779062904275,
+        "end_ms": 1779062924189,
+        "ttft_ms": 2545,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 61074,
+          "completion": 514,
+          "cached": 59776
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 38422,
+          "assistant": 7631,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 52,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "read_file",
+            "category": "Read",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ],
+              [
+                "start_line",
+                "<num>"
+              ],
+              [
+                "end_line",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 571,
+            "latency_ms": 53737,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 3563,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            94896,
+            94897,
+            94898,
+            94899,
+            94900,
+            94901,
+            94902,
+            94903
+          ],
+          "sha256_of_compact_json": "b3b541e9515e76e985f9f80be542f378dbd7a5055f0ebe13fb86714f22bd09a4"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 29,
+        "step": 28,
+        "turn_index": 3,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779062904275,
+        "end_ms": 1779062924189,
+        "gap_from_previous_completion_s": 25.427,
+        "input_o200k": 57012,
+        "encoded_tokens": 57008,
+        "delta_input": 1201,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 38422,
+        "role_assistant": 7631,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 55808,
+        "previous_shared_share": 0.9789503227617177,
+        "session_seen_tokens": 55808,
+        "session_seen_share": 0.9789503227617177,
+        "warm_5m_shared_tokens": 55808,
+        "warm_15m_shared_tokens": 55808,
+        "same_model_provider_as_previous": true,
+        "n_messages": 52,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "read_file",
+        "tool_output_tokens": 571,
+        "provider_prompt": 61074,
+        "provider_cached": 59776,
+        "provider_completion": 514
+      }
+    },
+    {
+      "source_request": {
+        "step": 29,
+        "turn_index": 3,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779062977926,
+        "end_ms": 1779062983579,
+        "ttft_ms": 2869,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 62148,
+          "completion": 82,
+          "cached": 61056
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 39329,
+          "assistant": 7707,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 54,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "read_file",
+            "category": "Read",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ],
+              [
+                "start_line",
+                "<num>"
+              ],
+              [
+                "end_line",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 2541,
+            "latency_ms": 7246,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 3624,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            94957,
+            94958,
+            94959,
+            94960,
+            94961,
+            94962,
+            94963,
+            94964
+          ],
+          "sha256_of_compact_json": "68cdcc692bb03258158d6fdf12028c3ab44612d03e0ec0bbbfba4b7c1114b6c8"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 30,
+        "step": 29,
+        "turn_index": 3,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779062977926,
+        "end_ms": 1779062983579,
+        "gap_from_previous_completion_s": 53.737,
+        "input_o200k": 57995,
+        "encoded_tokens": 57984,
+        "delta_input": 983,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 39329,
+        "role_assistant": 7707,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 57008,
+        "previous_shared_share": 0.983167770419426,
+        "session_seen_tokens": 57008,
+        "session_seen_share": 0.983167770419426,
+        "warm_5m_shared_tokens": 57008,
+        "warm_15m_shared_tokens": 57008,
+        "same_model_provider_as_previous": true,
+        "n_messages": 54,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "read_file",
+        "tool_output_tokens": 2541,
+        "provider_prompt": 62148,
+        "provider_cached": 61056,
+        "provider_completion": 82
+      }
+    },
+    {
+      "source_request": {
+        "step": 30,
+        "turn_index": 3,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779062990825,
+        "end_ms": 1779063001179,
+        "ttft_ms": 2060,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 65274,
+          "completion": 237,
+          "cached": 62080
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 42206,
+          "assistant": 7749,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 56,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "search_files",
+            "category": "Read",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ],
+              [
+                "regex",
+                "<path>"
+              ],
+              [
+                "file_pattern",
+                "<path>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 826,
+            "latency_ms": 18899,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 3807,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            95140,
+            95141,
+            95142,
+            95143,
+            95144,
+            95145,
+            95146,
+            95147
+          ],
+          "sha256_of_compact_json": "d3d3b4dbeadec87c3e965ea02acc0644478ff2b18722333643693b33a8a6d15b"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 31,
+        "step": 30,
+        "turn_index": 3,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779062990825,
+        "end_ms": 1779063001179,
+        "gap_from_previous_completion_s": 7.246,
+        "input_o200k": 60914,
+        "encoded_tokens": 60912,
+        "delta_input": 2919,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 42206,
+        "role_assistant": 7749,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 57984,
+        "previous_shared_share": 0.9519306540583137,
+        "session_seen_tokens": 57984,
+        "session_seen_share": 0.9519306540583137,
+        "warm_5m_shared_tokens": 57984,
+        "warm_15m_shared_tokens": 57984,
+        "same_model_provider_as_previous": true,
+        "n_messages": 56,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "search_files",
+        "tool_output_tokens": 826,
+        "provider_prompt": 65274,
+        "provider_cached": 62080,
+        "provider_completion": 237
+      }
+    },
+    {
+      "source_request": {
+        "step": 31,
+        "turn_index": 3,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779063020078,
+        "end_ms": 1779063025961,
+        "ttft_ms": 2107,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 66685,
+          "completion": 114,
+          "cached": 65152
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 43368,
+          "assistant": 7844,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 58,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "read_file",
+            "category": "Read",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ],
+              [
+                "start_line",
+                "<num>"
+              ],
+              [
+                "end_line",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 1370,
+            "latency_ms": 8023,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 3885,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            95218,
+            95219,
+            95220,
+            95221,
+            95222,
+            95223,
+            95224,
+            95225
+          ],
+          "sha256_of_compact_json": "41071e650289a699b5279072d22644e536477e7a422ff080005f1c16820ea049"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 32,
+        "step": 31,
+        "turn_index": 3,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779063020078,
+        "end_ms": 1779063025961,
+        "gap_from_previous_completion_s": 18.899,
+        "input_o200k": 62171,
+        "encoded_tokens": 62160,
+        "delta_input": 1257,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 43368,
+        "role_assistant": 7844,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 60912,
+        "previous_shared_share": 0.9799227799227799,
+        "session_seen_tokens": 60912,
+        "session_seen_share": 0.9799227799227799,
+        "warm_5m_shared_tokens": 60912,
+        "warm_15m_shared_tokens": 60912,
+        "same_model_provider_as_previous": true,
+        "n_messages": 58,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "read_file",
+        "tool_output_tokens": 1370,
+        "provider_prompt": 66685,
+        "provider_cached": 65152,
+        "provider_completion": 114
+      }
+    },
+    {
+      "source_request": {
+        "step": 32,
+        "turn_index": 3,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779063033984,
+        "end_ms": 1779063038794,
+        "ttft_ms": 2076,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 68551,
+          "completion": 80,
+          "cached": 66560
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 45074,
+          "assistant": 7906,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 60,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "read_file",
+            "category": "Read",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ],
+              [
+                "start_line",
+                "<num>"
+              ],
+              [
+                "end_line",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 1220,
+            "latency_ms": 7210,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 3996,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            95329,
+            95330,
+            95331,
+            95332,
+            95333,
+            95334,
+            95335,
+            95336
+          ],
+          "sha256_of_compact_json": "153722610c7d17f0e29511a33827f3adf0f30b8e672a95c165c5466590b5d1a6"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 33,
+        "step": 32,
+        "turn_index": 3,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779063033984,
+        "end_ms": 1779063038794,
+        "gap_from_previous_completion_s": 8.023,
+        "input_o200k": 63939,
+        "encoded_tokens": 63936,
+        "delta_input": 1768,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 45074,
+        "role_assistant": 7906,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 62160,
+        "previous_shared_share": 0.9722222222222222,
+        "session_seen_tokens": 62160,
+        "session_seen_share": 0.9722222222222222,
+        "warm_5m_shared_tokens": 62160,
+        "warm_15m_shared_tokens": 62160,
+        "same_model_provider_as_previous": true,
+        "n_messages": 60,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "read_file",
+        "tool_output_tokens": 1220,
+        "provider_prompt": 68551,
+        "provider_cached": 66560,
+        "provider_completion": 80
+      }
+    },
+    {
+      "source_request": {
+        "step": 33,
+        "turn_index": 3,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779063046004,
+        "end_ms": 1779063050940,
+        "ttft_ms": 1968,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 70274,
+          "completion": 82,
+          "cached": 68480
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 46630,
+          "assistant": 7948,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 62,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "read_file",
+            "category": "Read",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ],
+              [
+                "start_line",
+                "<num>"
+              ],
+              [
+                "end_line",
+                "<num>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 762,
+            "latency_ms": 6838,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 4096,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            95429,
+            95430,
+            95431,
+            95432,
+            95433,
+            95434,
+            95435,
+            95436
+          ],
+          "sha256_of_compact_json": "9902e353c8f07a33a6db5b06f96a20a21955423b3ed8a38016cec0981a074353"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 34,
+        "step": 33,
+        "turn_index": 3,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779063046004,
+        "end_ms": 1779063050940,
+        "gap_from_previous_completion_s": 7.21,
+        "input_o200k": 65537,
+        "encoded_tokens": 65536,
+        "delta_input": 1598,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 46630,
+        "role_assistant": 7948,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 63936,
+        "previous_shared_share": 0.9755859375,
+        "session_seen_tokens": 63936,
+        "session_seen_share": 0.9755859375,
+        "warm_5m_shared_tokens": 63936,
+        "warm_15m_shared_tokens": 63936,
+        "same_model_provider_as_previous": true,
+        "n_messages": 62,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "read_file",
+        "tool_output_tokens": 762,
+        "provider_prompt": 70274,
+        "provider_cached": 68480,
+        "provider_completion": 82
+      }
+    },
+    {
+      "source_request": {
+        "step": 34,
+        "turn_index": 3,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779063057778,
+        "end_ms": 1779063097325,
+        "ttft_ms": 2264,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 71501,
+          "completion": 1153,
+          "cached": 70272
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 47728,
+          "assistant": 7990,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 64,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 4167,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            95500,
+            95501,
+            95502,
+            95503,
+            95504,
+            95505,
+            95506,
+            95507
+          ],
+          "sha256_of_compact_json": "d3e5f53c05ddff833e4f30eb9343d4156ae1ca405ef60bd76ecbfa12d107336f"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 35,
+        "step": 34,
+        "turn_index": 3,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779063057778,
+        "end_ms": 1779063097325,
+        "gap_from_previous_completion_s": 6.838,
+        "input_o200k": 66677,
+        "encoded_tokens": 66672,
+        "delta_input": 1140,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 47728,
+        "role_assistant": 7990,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 65536,
+        "previous_shared_share": 0.9829613630909527,
+        "session_seen_tokens": 65536,
+        "session_seen_share": 0.9829613630909527,
+        "warm_5m_shared_tokens": 65536,
+        "warm_15m_shared_tokens": 65536,
+        "same_model_provider_as_previous": true,
+        "n_messages": 64,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 71501,
+        "provider_cached": 70272,
+        "provider_completion": 1153
+      }
+    },
+    {
+      "source_request": {
+        "step": 35,
+        "turn_index": 4,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779063143530,
+        "end_ms": 1779063173569,
+        "ttft_ms": 1637,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 74972,
+          "completion": 867,
+          "cached": 71424
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 50171,
+          "assistant": 8721,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 66,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 4365,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            95698,
+            95699,
+            95700,
+            95701,
+            95702,
+            95703,
+            95704,
+            95705
+          ],
+          "sha256_of_compact_json": "70a89e31867367928bed8799b7f109e1459212289d111ca1a0292285f90974c1"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 36,
+        "step": 35,
+        "turn_index": 4,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779063143530,
+        "end_ms": 1779063173569,
+        "gap_from_previous_completion_s": 46.205,
+        "input_o200k": 69851,
+        "encoded_tokens": 69840,
+        "delta_input": 3174,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 50171,
+        "role_assistant": 8721,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 66672,
+        "previous_shared_share": 0.954639175257732,
+        "session_seen_tokens": 66672,
+        "session_seen_share": 0.954639175257732,
+        "warm_5m_shared_tokens": 66672,
+        "warm_15m_shared_tokens": 66672,
+        "same_model_provider_as_previous": true,
+        "n_messages": 66,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 74972,
+        "provider_cached": 71424,
+        "provider_completion": 867
+      }
+    },
+    {
+      "source_request": {
+        "step": 36,
+        "turn_index": 5,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779063187166,
+        "end_ms": 1779063229345,
+        "ttft_ms": 1937,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 78083,
+          "completion": 1224,
+          "cached": 74880
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 52303,
+          "assistant": 9436,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 68,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 4543,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            95876,
+            95877,
+            95878,
+            95879,
+            95880,
+            95881,
+            95882,
+            95883
+          ],
+          "sha256_of_compact_json": "cd27f16197b04045d3f0b85c1845be5e1888d0497054489499021d325ffdf128"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 37,
+        "step": 36,
+        "turn_index": 5,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779063187166,
+        "end_ms": 1779063229345,
+        "gap_from_previous_completion_s": 13.597,
+        "input_o200k": 72698,
+        "encoded_tokens": 72688,
+        "delta_input": 2847,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 52303,
+        "role_assistant": 9436,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 69840,
+        "previous_shared_share": 0.9608188421747744,
+        "session_seen_tokens": 69840,
+        "session_seen_share": 0.9608188421747744,
+        "warm_5m_shared_tokens": 69840,
+        "warm_15m_shared_tokens": 69840,
+        "same_model_provider_as_previous": true,
+        "n_messages": 68,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 78083,
+        "provider_cached": 74880,
+        "provider_completion": 1224
+      }
+    },
+    {
+      "source_request": {
+        "step": 37,
+        "turn_index": 6,
+        "step_trigger": "user",
+        "link_reason": "assistant_message",
+        "start_ms": 1779074162801,
+        "end_ms": 1779074174416,
+        "ttft_ms": 7812,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 81261,
+          "completion": 108,
+          "cached": 13440
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 54476,
+          "assistant": 10218,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 70,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "read_file",
+            "category": "Read",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 558,
+            "latency_ms": 11603,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 4728,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            96061,
+            96062,
+            96063,
+            96064,
+            96065,
+            96066,
+            96067,
+            96068
+          ],
+          "sha256_of_compact_json": "a5f2a0cb0e10f7893fc6d954c62b42d9eefed0e46bd5c2421c18f19582faf551"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 38,
+        "step": 37,
+        "turn_index": 6,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779074162801,
+        "end_ms": 1779074174416,
+        "gap_from_previous_completion_s": 10933.456,
+        "input_o200k": 75653,
+        "encoded_tokens": 75648,
+        "delta_input": 2955,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 54476,
+        "role_assistant": 10218,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 72688,
+        "previous_shared_share": 0.9608714043993232,
+        "session_seen_tokens": 72688,
+        "session_seen_share": 0.9608714043993232,
+        "warm_5m_shared_tokens": 0,
+        "warm_15m_shared_tokens": 0,
+        "same_model_provider_as_previous": true,
+        "n_messages": 70,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "user",
+        "tool_call_count": 1,
+        "tool_names": "read_file",
+        "tool_output_tokens": 558,
+        "provider_prompt": 81261,
+        "provider_cached": 13440,
+        "provider_completion": 108
+      }
+    },
+    {
+      "source_request": {
+        "step": 38,
+        "turn_index": 6,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779074186019,
+        "end_ms": 1779074194433,
+        "ttft_ms": 2056,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 82733,
+          "completion": 162,
+          "cached": 81152
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 55819,
+          "assistant": 10260,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 72,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "read_file",
+            "category": "Read",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 5975,
+            "latency_ms": 11160,
+            "subagent": null
+          },
+          {
+            "call_index": 1,
+            "name": "read_file",
+            "category": "Read",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 1050,
+            "latency_ms": 11160,
+            "subagent": null
+          },
+          {
+            "call_index": 2,
+            "name": "read_file",
+            "category": "Read",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 846,
+            "latency_ms": 11160,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 4814,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            96147,
+            96148,
+            96149,
+            96150,
+            96151,
+            96152,
+            96153,
+            96154
+          ],
+          "sha256_of_compact_json": "4516337537fe976fcb928e5be5233e28ef309c29783ebf072d70bf1e29b08b84"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 39,
+        "step": 38,
+        "turn_index": 6,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779074186019,
+        "end_ms": 1779074194433,
+        "gap_from_previous_completion_s": 11.603,
+        "input_o200k": 77038,
+        "encoded_tokens": 77024,
+        "delta_input": 1385,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 55819,
+        "role_assistant": 10260,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 75648,
+        "previous_shared_share": 0.9821354383049439,
+        "session_seen_tokens": 75648,
+        "session_seen_share": 0.9821354383049439,
+        "warm_5m_shared_tokens": 75648,
+        "warm_15m_shared_tokens": 75648,
+        "same_model_provider_as_previous": true,
+        "n_messages": 72,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 3,
+        "tool_names": "read_file; read_file; read_file",
+        "tool_output_tokens": 7871,
+        "provider_prompt": 82733,
+        "provider_cached": 81152,
+        "provider_completion": 162
+      }
+    },
+    {
+      "source_request": {
+        "step": 39,
+        "turn_index": 6,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779074205593,
+        "end_ms": 1779074225229,
+        "ttft_ms": 1716,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 92109,
+          "completion": 471,
+          "cached": 82688
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 64475,
+          "assistant": 10351,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 74,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "read_file",
+            "category": "Read",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 639,
+            "latency_ms": 56925,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 5361,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            96694,
+            96695,
+            96696,
+            96697,
+            96698,
+            96699,
+            96700,
+            96701
+          ],
+          "sha256_of_compact_json": "44c1a752cf2b00a1c4fb3fb545b6857faf0f79cfbb40e522775f136eccad246c"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 40,
+        "step": 39,
+        "turn_index": 6,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779074205593,
+        "end_ms": 1779074225229,
+        "gap_from_previous_completion_s": 11.16,
+        "input_o200k": 85785,
+        "encoded_tokens": 85776,
+        "delta_input": 8747,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 64475,
+        "role_assistant": 10351,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 77024,
+        "previous_shared_share": 0.897966797239321,
+        "session_seen_tokens": 77024,
+        "session_seen_share": 0.897966797239321,
+        "warm_5m_shared_tokens": 77024,
+        "warm_15m_shared_tokens": 77024,
+        "same_model_provider_as_previous": true,
+        "n_messages": 74,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "read_file",
+        "tool_output_tokens": 639,
+        "provider_prompt": 92109,
+        "provider_cached": 82688,
+        "provider_completion": 471
+      }
+    },
+    {
+      "source_request": {
+        "step": 40,
+        "turn_index": 6,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779074282154,
+        "end_ms": 1779074331355,
+        "ttft_ms": 2575,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 93696,
+          "completion": 1325,
+          "cached": 92032
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 65899,
+          "assistant": 10387,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 76,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "plan_mode_respond",
+            "category": "Other",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "<key>",
+                "<path>"
+              ],
+              [
+                "task_progress",
+                "<path>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 29,
+            "latency_ms": 160193,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 5452,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            96785,
+            96786,
+            96787,
+            96788,
+            96789,
+            96790,
+            96791,
+            96792
+          ],
+          "sha256_of_compact_json": "6a993b028bb3d898d29d76c91a1897a7ca018524ece38ca36b66c0fc42d55463"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 41,
+        "step": 40,
+        "turn_index": 6,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779074282154,
+        "end_ms": 1779074331355,
+        "gap_from_previous_completion_s": 56.925,
+        "input_o200k": 87245,
+        "encoded_tokens": 87232,
+        "delta_input": 1460,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 65899,
+        "role_assistant": 10387,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 85776,
+        "previous_shared_share": 0.9833088774761556,
+        "session_seen_tokens": 85776,
+        "session_seen_share": 0.9833088774761556,
+        "warm_5m_shared_tokens": 85776,
+        "warm_15m_shared_tokens": 85776,
+        "same_model_provider_as_previous": true,
+        "n_messages": 76,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "plan_mode_respond",
+        "tool_output_tokens": 29,
+        "provider_prompt": 93696,
+        "provider_cached": 92032,
+        "provider_completion": 1325
+      }
+    },
+    {
+      "source_request": {
+        "step": 41,
+        "turn_index": 6,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779074491548,
+        "end_ms": 1779074517649,
+        "ttft_ms": 1666,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 95461,
+          "completion": 705,
+          "cached": 93568
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 66717,
+          "assistant": 11221,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 78,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "plan_mode_respond",
+            "category": "Other",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "<key>",
+                "<path>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 26,
+            "latency_ms": 61941,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 5556,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            96889,
+            96890,
+            96891,
+            96892,
+            96893,
+            96894,
+            96895,
+            96896
+          ],
+          "sha256_of_compact_json": "f738cf1fe517a377727c160b4f2ea7bc4a63c504a7fa17896119fe243614bdd0"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 42,
+        "step": 41,
+        "turn_index": 6,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779074491548,
+        "end_ms": 1779074517649,
+        "gap_from_previous_completion_s": 160.193,
+        "input_o200k": 88897,
+        "encoded_tokens": 88896,
+        "delta_input": 1652,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 66717,
+        "role_assistant": 11221,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 87232,
+        "previous_shared_share": 0.9812814974802015,
+        "session_seen_tokens": 87232,
+        "session_seen_share": 0.9812814974802015,
+        "warm_5m_shared_tokens": 87232,
+        "warm_15m_shared_tokens": 87232,
+        "same_model_provider_as_previous": true,
+        "n_messages": 78,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "plan_mode_respond",
+        "tool_output_tokens": 26,
+        "provider_prompt": 95461,
+        "provider_cached": 93568,
+        "provider_completion": 705
+      }
+    },
+    {
+      "source_request": {
+        "step": 42,
+        "turn_index": 6,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779074579590,
+        "end_ms": 1779074590798,
+        "ttft_ms": 2494,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 96254,
+          "completion": 257,
+          "cached": 95360
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 67078,
+          "assistant": 11586,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 80,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "replace_in_file",
+            "category": "Other",
+            "programs": null,
+            "parse_status": null,
+            "arguments": [
+              [
+                "path",
+                "<path>"
+              ],
+              [
+                "diff",
+                "<path>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 4779,
+            "latency_ms": 75746,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 5601,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            96934,
+            96935,
+            96936,
+            96937,
+            96938,
+            96939,
+            96940,
+            96941
+          ],
+          "sha256_of_compact_json": "d3283e05bcb86a2f86c48f3b9ee685629d22608b9fc0796cb5210c7720e2a7a2"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 43,
+        "step": 42,
+        "turn_index": 6,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779074579590,
+        "end_ms": 1779074590798,
+        "gap_from_previous_completion_s": 61.941,
+        "input_o200k": 89623,
+        "encoded_tokens": 89616,
+        "delta_input": 726,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 67078,
+        "role_assistant": 11586,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 88896,
+        "previous_shared_share": 0.9919657204070702,
+        "session_seen_tokens": 88896,
+        "session_seen_share": 0.9919657204070702,
+        "warm_5m_shared_tokens": 88896,
+        "warm_15m_shared_tokens": 88896,
+        "same_model_provider_as_previous": true,
+        "n_messages": 80,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "replace_in_file",
+        "tool_output_tokens": 4779,
+        "provider_prompt": 96254,
+        "provider_cached": 95360,
+        "provider_completion": 257
+      }
+    },
+    {
+      "source_request": {
+        "step": 43,
+        "turn_index": 6,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779074666544,
+        "end_ms": 1779074675655,
+        "ttft_ms": 2878,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 102005,
+          "completion": 204,
+          "cached": 96128
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 72192,
+          "assistant": 11766,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 82,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "execute_command",
+            "category": "*Interpreter",
+            "programs": [
+              "cd",
+              "python <word>"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "cd <path> && python -m <word> <str> 2>&1"
+              ],
+              [
+                "requires_approval",
+                "<str>"
+              ],
+              [
+                "task_progress",
+                "<str>"
+              ]
+            ],
+            "outcome": "error",
+            "result_tokens": 338,
+            "latency_ms": 8404,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 5932,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            97265,
+            97266,
+            97267,
+            97268,
+            97269,
+            97270,
+            97271,
+            97272
+          ],
+          "sha256_of_compact_json": "336fdae089cdb804738082816becd14b66e2000aef02aaa80b3cb8aa61250d8b"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 44,
+        "step": 43,
+        "turn_index": 6,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779074666544,
+        "end_ms": 1779074675655,
+        "gap_from_previous_completion_s": 75.746,
+        "input_o200k": 94917,
+        "encoded_tokens": 94912,
+        "delta_input": 5294,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 72192,
+        "role_assistant": 11766,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 89616,
+        "previous_shared_share": 0.9442009440323669,
+        "session_seen_tokens": 89616,
+        "session_seen_share": 0.9442009440323669,
+        "warm_5m_shared_tokens": 89616,
+        "warm_15m_shared_tokens": 89616,
+        "same_model_provider_as_previous": true,
+        "n_messages": 82,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "execute_command",
+        "tool_output_tokens": 338,
+        "provider_prompt": 102005,
+        "provider_cached": 96128,
+        "provider_completion": 204
+      }
+    },
+    {
+      "source_request": {
+        "step": 44,
+        "turn_index": 6,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779074684059,
+        "end_ms": 1779074696399,
+        "ttft_ms": 5009,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 53304,
+          "completion": 235,
+          "cached": 13440
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 33183,
+          "assistant": 5463,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 44,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "mutation",
+          "cause": "dropped_turns"
+        },
+        "tool_calls": [
+          {
+            "call_index": 0,
+            "name": "execute_command",
+            "category": "*Search",
+            "programs": [
+              "ls",
+              "echo",
+              "mount",
+              "grep",
+              "echo",
+              "cat",
+              "grep"
+            ],
+            "parse_status": "success",
+            "arguments": [
+              [
+                "command",
+                "ls -la <path> 2>&1 ; echo <str> ; mount | grep <str> 2>&1 ; echo <str> ; cat <path> 2>&1 | grep <str>"
+              ],
+              [
+                "requires_approval",
+                "<str>"
+              ]
+            ],
+            "outcome": "ok",
+            "result_tokens": 300,
+            "latency_ms": 19560,
+            "subagent": null
+          }
+        ],
+        "block_ids_summary": {
+          "count": 3100,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            99562,
+            99563,
+            99564,
+            99565,
+            99566,
+            99567,
+            99568,
+            99569
+          ],
+          "sha256_of_compact_json": "895b9a062db30e7828124b41e20756c1deb18237f9a8cc22b9f2a020670d21fd"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 45,
+        "step": 44,
+        "turn_index": 6,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779074684059,
+        "end_ms": 1779074696399,
+        "gap_from_previous_completion_s": 8.404,
+        "input_o200k": 49605,
+        "encoded_tokens": 49600,
+        "delta_input": -45312,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 33183,
+        "role_assistant": 5463,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 12848,
+        "previous_shared_share": 0.25903225806451613,
+        "session_seen_tokens": 12848,
+        "session_seen_share": 0.25903225806451613,
+        "warm_5m_shared_tokens": 12848,
+        "warm_15m_shared_tokens": 12848,
+        "same_model_provider_as_previous": true,
+        "n_messages": 44,
+        "transition": "mutation",
+        "cause": "dropped_turns",
+        "step_trigger": "tool",
+        "tool_call_count": 1,
+        "tool_names": "execute_command",
+        "tool_output_tokens": 300,
+        "provider_prompt": 53304,
+        "provider_cached": 13440,
+        "provider_completion": 235
+      }
+    },
+    {
+      "source_request": {
+        "step": 45,
+        "turn_index": 6,
+        "step_trigger": "tool",
+        "link_reason": "assistant_message",
+        "start_ms": 1779074715959,
+        "end_ms": 1779074722131,
+        "ttft_ms": 1826,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "stream": true,
+        "provider_tokens": {
+          "prompt": 54397,
+          "completion": 135,
+          "cached": 53248
+        },
+        "role_tokens": {
+          "system": 10959,
+          "user": 34113,
+          "assistant": 5567,
+          "tool": 0,
+          "tool_definitions": 0
+        },
+        "n_messages": 46,
+        "tool_definition_names": [],
+        "finish_reason": "stop",
+        "mutation": {
+          "transition": "append",
+          "cause": null
+        },
+        "tool_calls": [],
+        "block_ids_summary": {
+          "count": 3164,
+          "first_8": [
+            81250,
+            81251,
+            81252,
+            81253,
+            81254,
+            81255,
+            81256,
+            81257
+          ],
+          "last_8": [
+            99626,
+            99627,
+            99628,
+            99629,
+            99630,
+            99631,
+            99632,
+            99633
+          ],
+          "sha256_of_compact_json": "8f4a08d001002ff559b73b5a6dbf4254d835dd7dad57913897aa8dfa27d8658d"
+        }
+      },
+      "derived_metrics": {
+        "session_id": "26b3e835fc1dc0d41af636b34005c880",
+        "harness": "cline",
+        "request_number": 46,
+        "step": 45,
+        "turn_index": 6,
+        "model": "deepseek-v4-pro",
+        "provider": "H",
+        "start_ms": 1779074715959,
+        "end_ms": 1779074722131,
+        "gap_from_previous_completion_s": 19.56,
+        "input_o200k": 50639,
+        "encoded_tokens": 50624,
+        "delta_input": 1034,
+        "role_tool_definitions": 0,
+        "role_system": 10959,
+        "role_user": 34113,
+        "role_assistant": 5567,
+        "role_tool": 0,
+        "tool_input_share": 0.0,
+        "previous_shared_tokens": 49600,
+        "previous_shared_share": 0.9797724399494311,
+        "session_seen_tokens": 49600,
+        "session_seen_share": 0.9797724399494311,
+        "warm_5m_shared_tokens": 49600,
+        "warm_15m_shared_tokens": 49600,
+        "same_model_provider_as_previous": true,
+        "n_messages": 46,
+        "transition": "append",
+        "cause": null,
+        "step_trigger": "tool",
+        "tool_call_count": 0,
+        "tool_names": "",
+        "tool_output_tokens": 0,
+        "provider_prompt": 54397,
+        "provider_cached": 53248,
+        "provider_completion": 135
+      }
+    }
+  ]
+}

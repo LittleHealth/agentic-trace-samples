@@ -1,6 +1,6 @@
 # Agentic Trace Samples
 
-四类应用，12 条已有执行轨迹。每条包含完整任务、按顺序排列的调用与观察、结束状态和来源。
+四类应用的 12 条正文轨迹，包含任务、调用与观察、结束状态和来源。另有 3 条 FreeInference 元数据会话及一周上下文与缓存分析。
 
 | 应用 | 样本数 | 执行过程 | 分类索引 |
 |---|---:|---|---|
@@ -9,7 +9,19 @@
 | 网页操作 | 3 | 观察页面、点击、输入、导航 | [网页操作](samples/browser/README.md) |
 | 检索问答 | 3 | 搜索、阅读、查找证据、回答 | [检索问答](samples/research-qa/README.md) |
 
-## 全部样本
+## FreeInference：三条会话与一周分析
+
+[阅读首页与图表](samples/freeinference/README.md) · [完整分析报告](samples/freeinference/report/README.md) · [官方模拟结果](samples/freeinference/report/official-simulation-summary.csv)
+
+| 会话结构 | 请求数 | 逐轮请求表 | 阅读用 JSON | 完整 JSON |
+|---|---:|---|---|---|
+| 持续追加（hermes） | 44 | [请求表](samples/freeinference/01-append/README.md) | [JSON](samples/freeinference/01-append/requests.json) | [完整记录](samples/freeinference/01-append/trace.json) |
+| 注入改写（kilo） | 27 | [请求表](samples/freeinference/02-injection/README.md) | [JSON](samples/freeinference/02-injection/requests.json) | [完整记录](samples/freeinference/02-injection/trace.json) |
+| 删除历史轮次（cline） | 46 | [请求表](samples/freeinference/03-dropped-turns/README.md) | [JSON](samples/freeinference/03-dropped-turns/requests.json) | [完整记录](samples/freeinference/03-dropped-turns/trace.json) |
+
+一周覆盖 **106 个顶层会话、10,548 次模型请求**，完成官方 **4 种策略 × 13 个 TTL** 缓存模拟。FreeInference 没有发布消息正文；这里展示请求结构、匿名化工具调用、token 计数和前缀变化，单独列于正文轨迹之外。
+
+## 12 条正文轨迹
 
 | 应用 | 具体任务 | 来源状态 | 阅读 |
 |---|---|---|---|
@@ -44,7 +56,6 @@ assistant 是模型生成的消息，tool 是工具返回。同一模型消息�
 | 软件修复 | [Nebius SWE-rebench OpenHands trajectories](https://huggingface.co/datasets/nebius/SWE-rebench-openhands-trajectories) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
 | 网页操作 | [toeunkim / MATM trajectories](https://huggingface.co/datasets/toeunkim/matm-trajectories) | [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) |
 | 检索问答 | [OpenResearcher Dataset](https://huggingface.co/datasets/OpenResearcher/OpenResearcher-Dataset) | 数据集卡声明 MIT |
+| 会话与缓存元数据 | [FreeInference Agentic Trace](https://huggingface.co/datasets/harvardMadsys/freeinference_agentic_trace) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
 
 样本 ID、来源链接和原文校验值见各样本页。阅读版添加索引与排版，来源内容保留原归属。
-
-[FreeInference](https://huggingface.co/datasets/harvardMadsys/freeinference_agentic_trace) 作为调用规模研究的补充入口，不计入上述 12 条正文样本。
