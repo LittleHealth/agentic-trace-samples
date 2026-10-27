@@ -1,45 +1,50 @@
 # Agentic Trace Samples
 
-四类应用，各一条已有 agent 执行轨迹。点击阅读版，可以顺着任务、调用、工具观察和结束状态读完整个过程；同目录的 `trace.json` 保留来源原文。
+四类应用，12 条已有执行轨迹。每条包含完整任务、按顺序排列的调用与观察、结束状态和来源。
 
-本版用于向导师展示“不同 application 下的 traces 长什么样”。样本均来自已有材料，本次没有运行新 agent、重放工具命令或进行压缩实验。
+| 应用 | 样本数 | 执行过程 | 分类索引 |
+|---|---:|---|---|
+| 数据分析 / Agentic SQL | 3 | 查库、读取数据、计算、回答 | [数据分析](samples/data-analysis/README.md) |
+| 软件修复 | 3 | 查看文件、复现、改代码、测试 | [软件修复](samples/software-repair/README.md) |
+| 网页操作 | 3 | 观察页面、点击、输入、导航 | [网页操作](samples/browser/README.md) |
+| 检索问答 | 3 | 搜索、阅读、查找证据、回答 | [检索问答](samples/research-qa/README.md) |
 
-## 从这里开始
+## 全部样本
 
-| Application | 具体任务 | 能直接看到的执行过程 | 阅读版与原文 | 来源记录的结束情况 |
-|---|---|---|---|---|
-| 数据分析 / Agentic SQL | 找出 2020 年以来平均日内波动率最高的亚洲股指 | 查库 → 日期解析报错 → 取大结果 → Python 读取与计算 → 回答 | [逐步阅读](samples/data-analysis/README.md) · [原始 JSON](samples/data-analysis/trace.json) | 已提交答案；没有附加成功标签 |
-| 软件修复 | 修复 `GetEdk2RelativePathFromAbsolutePath()` 返回非 POSIX 路径的问题 | 查看文件 → 创建复现 → 修改代码 → 运行测试 → 提交补丁 | [逐步阅读](samples/software-repair/README.md) · [原始 JSON](samples/software-repair/trace.json) | `submit`，来源 `resolved=1` |
-| 网页操作 | 在关系讨论社区发布有关出轨的求助帖 | 页面观察 → 搜索 → 点击与输入 → 提交帖子、评论 → 停止 | [逐步阅读](samples/browser/README.md) · [原始 JSON](samples/browser/trace.json) | `stop`，来源 `success=true` |
-| 检索问答 | 根据线索识别四位古埃及法老，并按在位时间排序 | 搜索 → 打开资料 → 页内查找 → 继续核对 → 带引用回答 | [逐步阅读](samples/research-qa/README.md) · [原始 JSON](samples/research-qa/trace.json) | 存在 final 回答，来源运行状态 `success` |
+| 应用 | 具体任务 | 来源状态 | 阅读 |
+|---|---|---|---|
+| 数据分析 / Agentic SQL | 亚洲股指平均日内波动率 | 已提交答案（来源未附评测标签） | [步骤](samples/data-analysis/01-asian-index/README.md) · [JSON](samples/data-analysis/01-asian-index/trace.json) |
+| 数据分析 / Agentic SQL | 财务困难公司的平均成交量 | 已提交答案（来源未附评测标签） | [步骤](samples/data-analysis/02-trading-volume/README.md) · [JSON](samples/data-analysis/02-trading-volume/trace.json) |
+| 数据分析 / Agentic SQL | 英文文学类满分图书 | 已提交答案（来源未附评测标签） | [步骤](samples/data-analysis/03-perfect-rated-books/README.md) · [JSON](samples/data-analysis/03-perfect-rated-books/trace.json) |
+| 软件修复 | 修复非 POSIX 路径 | submit；resolved=1 | [步骤](samples/software-repair/01-posix-path/README.md) · [JSON](samples/software-repair/01-posix-path/trace.json) |
+| 软件修复 | 修复 NetCDF 变量名中的斜杠 | submit；resolved=0 | [步骤](samples/software-repair/02-netcdf-variable-names/README.md) · [JSON](samples/software-repair/02-netcdf-variable-names/trace.json) |
+| 软件修复 | 处理 AndroidTV 的 ADB 查询失败 | submit；resolved=0 | [步骤](samples/software-repair/03-androidtv-adb/README.md) · [JSON](samples/software-repair/03-androidtv-adb/trace.json) |
+| 网页操作 | 发布关系问题求助帖 | success=true；done=true | [步骤](samples/browser/01-relationship-post/README.md) · [JSON](samples/browser/01-relationship-post/trace.json) |
+| 网页操作 | 转发白头鹰图片 | success=false；done=false | [步骤](samples/browser/02-repost-eagle/README.md) · [JSON](samples/browser/02-repost-eagle/trace.json) |
+| 网页操作 | 发布 AndroidAsync 项目介绍 | success=false；done=false | [步骤](samples/browser/03-promote-repository/README.md) · [JSON](samples/browser/03-promote-repository/trace.json) |
+| 检索问答 | 排列四位古埃及法老 | status=success（运行状态） | [步骤](samples/research-qa/01-pharaoh-order/README.md) · [JSON](samples/research-qa/01-pharaoh-order/trace.json) |
+| 检索问答 | 检索图像生成个性化方法 | status=success（运行状态） | [步骤](samples/research-qa/02-image-personalization/README.md) · [JSON](samples/research-qa/02-image-personalization/trace.json) |
+| 检索问答 | 查找澳式足球决赛对手 | status=success（运行状态） | [步骤](samples/research-qa/03-football-finalist/README.md) · [JSON](samples/research-qa/03-football-finalist/trace.json) |
 
-## 怎么阅读
+## 阅读方式
 
-1. 先读样本的完整任务，再看步骤表。
-2. 点击步骤编号，展开该步的完整调用、参数与观察正文。表格中的短句是定位摘录，折叠块不再裁短这些正文。
-3. 最后看“如何结束”和“来源与原文”，对照样本 ID、来源链接与 JSON。
+- **步骤页**：先看任务和步骤表，再展开完整调用与观察。长轨迹按页保留全部步骤。
+- **可读 JSON（trace.json）**：双空格缩进；工具 arguments 中的 JSON 展开为对象，网页 trajectory 字符串展开为数组。
+- **原始 JSON（trace.raw.json）**：保留来源字节、字段类型和转义。可读 JSON 是展示副本，不替代原始记录。
 
-软件 / SQL / 问答的工具返回按原消息顺序展示；并行调用通过原始调用 ID 对应返回。网页样本中的观察按动作前页面展示，详细页面时序说明见该样本。
+assistant 是模型生成的消息，tool 是工具返回。同一模型消息可包含多个工具调用，通过调用 ID 对应返回。网页样本按动作前观察展示，时序依据写在各样本页。
 
-## 原文保存方式
+来源中的成功、提交、运行结束和失败标记分别照录；它们不等同于新增的独立正确性验证。已有截断和缺失会在样本页注明。
 
-- DAB：逐字节复制本地公开轨迹归档中的一条原始 JSON。
-- 其余三条：从本地已缓存的 Hugging Face Viewer JSON 响应中提取选中 row 对象的原始文本切片。字段、消息、转义与来源类型保留；没有重新生成会话或补写缺失步骤。
-- 不统一原始 schema。例如 MATM 的 `trajectory` 在原记录中是 JSON 字符串，本仓库仍保存为字符串，只在阅读版解码展示。
-- 来源运行状态照录。`submit`、`success`、`resolved` 的含义不完全相同；本版没有新增正确性验证。已知截断和缺失分别写在各样本页。
-- 各样本页附原文 SHA-256、来源定位与署名；Viewer 的行号与接口可能随数据集更新变化，优先使用样本 ID 和保留的原文核对。缓存元数据中的 revision 是取样时观测值，不能单独证明 Viewer 响应已绑定到该 revision。
+## 来源
 
-## 来源与署名
-
-| 本仓库样本 | 原来源 / 发布者 | 数据集卡许可或归属信息 |
+| 应用 | 数据来源 | 数据集卡许可 / 归属 |
 |---|---|---|
-| data-analysis | [DataAgentBench，UC Berkeley EPIC / DAB 项目](https://github.com/ucbepic/DataAgentBench) | 保留上游归属；本仓库不为归档另行指定许可 |
-| software-repair | [Nebius SWE-rebench OpenHands trajectories](https://huggingface.co/datasets/nebius/SWE-rebench-openhands-trajectories) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
-| browser | [toeunkim / MATM trajectories](https://huggingface.co/datasets/toeunkim/matm-trajectories) | [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) |
-| research-qa | [OpenResearcher Dataset](https://huggingface.co/datasets/OpenResearcher/OpenResearcher-Dataset) | 数据集卡声明 MIT |
+| 数据分析 | [DataAgentBench](https://github.com/ucbepic/DataAgentBench) | 保留 DataAgentBench 项目归属 |
+| 软件修复 | [Nebius SWE-rebench OpenHands trajectories](https://huggingface.co/datasets/nebius/SWE-rebench-openhands-trajectories) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| 网页操作 | [toeunkim / MATM trajectories](https://huggingface.co/datasets/toeunkim/matm-trajectories) | [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) |
+| 检索问答 | [OpenResearcher Dataset](https://huggingface.co/datasets/OpenResearcher/OpenResearcher-Dataset) | 数据集卡声明 MIT |
 
-阅读版是为定位原始记录添加的说明和排版，代码片段、工具结果与网页材料继续保留原来源归属。仓库没有给不同来源的内容套用统一许可。
+样本 ID、来源链接和原文校验值见各样本页。阅读版添加索引与排版，来源内容保留原归属。
 
-[FreeInference](https://huggingface.co/datasets/harvardMadsys/freeinference_agentic_trace) 保留为后续研究调用规模的入口；由于缺少消息正文，本版没有将其作为四类应用的展示样本。
-
-整理日期：2026-10-27（Asia/Taipei）。共 4 条样本，目录内只有本首页、4 份阅读版和 4 份原始 JSON，无需安装或运行程序。
+[FreeInference](https://huggingface.co/datasets/harvardMadsys/freeinference_agentic_trace) 作为调用规模研究的补充入口，不计入上述 12 条正文样本。
