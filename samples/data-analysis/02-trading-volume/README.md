@@ -1,6 +1,6 @@
 # 财务困难公司的平均成交量
 
-[首页](../../../README.md) · [同类样本](../README.md) · [可读 JSON](trace.json) · [原始 JSON](trace.raw.json)
+[首页](../../../README.md) · [同类样本](../README.md) · [任务—查询—对象映射](mapping.md) · [可读 JSON](trace.json) · [原始 JSON](trace.raw.json)
 
 筛选 NASDAQ 财务困难公司，计算各公司 2008 年的非空平均日成交量。
 

@@ -1,6 +1,6 @@
 # 英文文学类满分图书
 
-[首页](../../../README.md) · [同类样本](../README.md) · [可读 JSON](trace.json) · [原始 JSON](trace.raw.json)
+[首页](../../../README.md) · [同类样本](../README.md) · [任务—查询—对象映射](mapping.md) · [可读 JSON](trace.json) · [原始 JSON](trace.raw.json)
 
 找出英文 Literature & Fiction 图书中全部评论平均分为 5.0 的书。
 

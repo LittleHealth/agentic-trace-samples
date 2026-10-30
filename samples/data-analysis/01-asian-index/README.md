@@ -1,6 +1,6 @@
 # 亚洲股指平均日内波动率
 
-[首页](../../../README.md) · [同类样本](../README.md) · [可读 JSON](trace.json) · [原始 JSON](trace.raw.json)
+[首页](../../../README.md) · [同类样本](../README.md) · [任务—查询—对象映射](mapping.md) · [可读 JSON](trace.json) · [原始 JSON](trace.raw.json)
 
 找出 2020 年以来平均日内波动率最高的亚洲股票指数。
 

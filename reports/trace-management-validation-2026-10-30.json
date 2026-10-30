@@ -1,0 +1,77 @@
+{
+  "all_passed": true,
+  "sample_counts": {
+    "data-analysis": 6,
+    "software-repair": 3,
+    "browser": 3,
+    "research-qa": 3,
+    "freeinference": 3
+  },
+  "dab_tasks": 6,
+  "dab_messages": 107,
+  "dab_tool_calls": 50,
+  "all_raw_bytes_and_normalized_json_match_sources": true,
+  "all_call_observation_pairs_verified": true,
+  "failure_mentions_not_treated_as_result_producers": true,
+  "local_markdown_links_checked": 1148,
+  "all_local_markdown_links_and_step_anchors_resolve": true,
+  "new_benchmark_agent_runs": 0,
+  "recorded_tools_executed": 0,
+  "compression_experiments_executed": 0,
+  "samples": [
+    {
+      "task_id": "D1",
+      "source_id": "gemini-3-pro/stockindex/query1/run_0.json",
+      "raw_sha256": "52f32d1e05412b5f085ac43e800186045dccb3f772a3b13d6083d51a69d4dcdc",
+      "original_bytes_match": true,
+      "normalized_json_match": true,
+      "calls": 9,
+      "all_calls_paired": true
+    },
+    {
+      "task_id": "D2",
+      "source_id": "gemini-3-pro/stockmarket/query3/run_0.json",
+      "raw_sha256": "d2affa4af340b7cb4e8491a31b949bd8e9acd9eb6714bc2073c2fb0630c2255d",
+      "original_bytes_match": true,
+      "normalized_json_match": true,
+      "calls": 12,
+      "all_calls_paired": true
+    },
+    {
+      "task_id": "D3",
+      "source_id": "gemini-3-pro/bookreview/query2/run_0.json",
+      "raw_sha256": "8e65993c9db295ffb9dce3440a025626a175db0e7e4f1447dabeaac1e14cb6e0",
+      "original_bytes_match": true,
+      "normalized_json_match": true,
+      "calls": 8,
+      "all_calls_paired": true
+    },
+    {
+      "task_id": "D4",
+      "source_id": "gemini-3-pro/stockmarket/query1/run_0.json",
+      "raw_sha256": "bd9ea0e4bd371a959a2e23e0d0a73df457ed47dd15e4cad91660df1356a013e8",
+      "original_bytes_match": true,
+      "normalized_json_match": true,
+      "calls": 3,
+      "all_calls_paired": true
+    },
+    {
+      "task_id": "D5",
+      "source_id": "gemini-3-pro/googlelocal/query3/run_0.json",
+      "raw_sha256": "f1ba62e2c5b0062dbd577182005fdc6130fa3037112c5993918df1fe363b40fd",
+      "original_bytes_match": true,
+      "normalized_json_match": true,
+      "calls": 9,
+      "all_calls_paired": true
+    },
+    {
+      "task_id": "D6",
+      "source_id": "gemini-3-pro/yelp/query1/run_0.json",
+      "raw_sha256": "2c621960a7cd8858a1b10c7b432764761f910e0b80640296b781bc59c5ef2b17",
+      "original_bytes_match": true,
+      "normalized_json_match": true,
+      "calls": 9,
+      "all_calls_paired": true
+    }
+  ]
+}
